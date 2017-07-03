@@ -1,0 +1,89 @@
+extends include/template
+
+block title
+	title main
+block description
+	+description('Lorem ipsum')
+block keywords
+	+keywords('Creative, web, development')
+
+block css
+	// build:css vendor.min.css
+	+styles('libs/bootstrap/dist/css/bootstrap.min.css')
+	// endbuild
+	// build:css main.min.css
+	+styles('css/fonts.css', 'css/main.css')
+	// endbuild
+
+block content
+	include include/header
+	.page-wrap
+		.container
+			.page-heading
+				p Первое #[span.dot] Новости
+			section.main
+				.main__heading
+					h1 Новости
+				nav.main__menu.menu
+					li.menu__item
+						a(href='#').menu__link Технологии
+					li.menu__item
+						a(href='#').menu__link Транспорт
+					li.menu__item
+						a(href='#').menu__link События
+					li.menu__item
+						a(href='#').menu__link Спорт
+					li.menu__item
+						a(href='#').menu__link Вузы
+					li.menu__item
+						a(href='#').menu__link Волонотерство
+					li.menu__item
+						a(href='#').menu__link Наука
+					li.menu__item
+						a(href='#').menu__link Анонсы
+					li.menu__item
+						a(href='#').menu__link-last Ещё +
+				.main__body
+					.main__item
+						figure
+							img(src="img/main/main-item-1.png", alt="")
+							figcaption
+						+date('20 января', '15:42')
+						p.item__text
+					.main__item
+						figure
+							img(src="img/main/main-item-1.png", alt="")
+							figcaption
+						+date('20 января', '15:42')
+						p.item__text
+					.main__item
+						figure
+							img(src="img/main/main-item-1.png", alt="")
+							figcaption
+						+date('20 января', '15:42')
+						p.item__text
+
+			section.sidebar
+				.news
+					.news__heading
+						h2 Главные новости
+					ul.news__dates
+						li
+							a(href="#")
+						li
+							a(href="#")
+						li
+							a(href="#")
+					.news__item
+						span.number
+						+date('20 января', '15:42')
+						p.sidebar__text 8 советов от детей, как родителям вести себя в соцсетях и не только
+						+discuss('25', '3', '4896', '5')
+
+block scripts
+	//build:js vendor.min.js
+	+scripts('libs/jquery/dist/jquery.min.js','libs/bootstrap/dist/js/bootstrap.min.js')
+	// endbuild
+	//build:js main.min.js
+	+scripts('js/main.js')
+	// endbuild

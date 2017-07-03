@@ -1,0 +1,22 @@
+mixin styles(...styles)
+	each css in styles
+		link(rel="stylesheet", href=css)
+
+mixin scripts(...scripts)
+	each js in scripts
+		script(src=js)
+
+mixin description(desc)
+	meta(name="description" content=desc)
+
+mixin keywords(keys)
+	meta(name="keywords" content=keys)
+
+//- mixin menu(li, a, href, name)
+//- 	each name in names
+
+mixin date(date, time)
+	p.date #{date} #[span.clock] #{time}
+
+mixin discuss(like,dislike,view,comment)
+	.discuss #[span.like] #{like} #[span.dislike] #{dislike} #[span.view] #{view} #[span.comment] #{comment}
