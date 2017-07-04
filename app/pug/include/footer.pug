@@ -10,20 +10,14 @@ footer.footer
 			{href: '#', name: 'Афиша'}
 			], 'menu-footer__item')
 		.footer__logo
-		.footer__social.social.social_footer
+		.footer__links
 			.footer__map
 				span.map Карта студенческих СМИ Москвы
-			ul
-				+social([
-				{href: '#', img:'vk'},
-				{href: '#', img:'google'},
-				{href: '#', img:'youtube'},
-				{href: '#', img:'instagram'},
-				{href: '#', img:'fb'},
-				{href: '#', img:'ok'},
-				{href: '#', img:'twitter'},
-				], 'social-footer')
-				+social_test('#')
+			ul.social.social_footer
+				li.social__item.siocial_footer__item
+					a(href="#")
+						include ../../images/social/vk.svg
+
 
 		.footer__terms
 			p 2017 © Первое студенческое агентство. При использовании материалов ссылка на источник обязательна.

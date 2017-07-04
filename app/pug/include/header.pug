@@ -31,17 +31,29 @@ header
 						], 'main-nav__item')
 					.block-nav__map
 						span.map Карта студенческих СМИ Москвы
-					.block-nav__social.social.nav.navbar-nav
-						ul
-							+social([
-							{href: '#', img:'vk'},
-							{href: '#', img:'google'},
-							{href: '#', img:'youtube'},
-							{href: '#', img:'instagram'},
-							{href: '#', img:'fb'},
-							{href: '#', img:'ok'},
-							{href: '#', img:'twitter'},
-							])
+					.block-nav__social.nav.navbar-nav
+						ul.social
+							li.social__item
+								a(href="#")
+									include ../../images/social/vk.svg
+							li.social__item
+								a(href="#")
+									include ../../images/social/google.svg
+							li.social__item
+								a(href="#")
+									include ../../images/social/youtube.svg
+							li.social__item
+								a(href="#")
+									include ../../images/social/instagram.svg
+							li.social__item
+								a(href="#")
+									include ../../images/social/fb.svg
+							li.social__item
+								a(href="#")
+									include ../../images/social/ok.svg
+							li.social__item
+								a(href="#")
+									include ../../images/social/twitter.svg
 
 				.navbar__block.block-logo
 					.block-logo__help.block-logo__help_left
@@ -71,7 +83,7 @@ header
 						+menu([
 						{href: '#', name: 'Новости'},
 						{href: '#', name: 'Блоги'},
-						{href: '#', name: 'Мастхев'},
+						{href: '#', name: 'Мастхэв'},
 						{href: '#', name: 'Журналы'},
 						{href: '#', name: 'Смотрят звезды'},
 						{href: '#', name: 'Афиша'}

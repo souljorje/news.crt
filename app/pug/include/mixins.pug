@@ -12,21 +12,26 @@ mixin description(desc)
 mixin keywords(keys)
 	meta(name="keywords" content=keys)
 
-mixin social_test(href)
-	li.social-test
+
+mixin social__footer(href)
+	li.social__item.social_footer__item
 		a(href=href)
 
-mixin social(items,type)
-	if type===undefined
-		each item in items
-			li.social__item
-				a(href=item.href)
-					svg(src="images/social/" + item.img + ".svg", alt=item.img)
-	else
-		each item in items
-			li.social__item(class=type)
-				a(href=item.href)
-					img(xmlns="http://www.w3.org/2000/svg", viewBox="item.veiwbox")
+mixin social(href)
+	li.social__item
+		a(href=href)
+
+//- mixin social(items,type)
+//- 	if type===undefined
+//- 		each item in items
+//- 			li.social__item
+//- 				a(href=item.href)
+//- 					include ../../images/social/vk.svg
+//- 	else
+//- 		each item in items
+//- 			li.social__item(class=type)
+//- 				a(href=item.href)
+//- 					include ../../images/social/vk.svg
 
 mixin menu(items,type)
 	each item in items
