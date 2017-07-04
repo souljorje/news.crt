@@ -12,11 +12,59 @@ mixin description(desc)
 mixin keywords(keys)
 	meta(name="keywords" content=keys)
 
-//- mixin menu(li, a, href, name)
-//- 	each name in names
+mixin social_test(href)
+	li.social-test
+		a(href=href)
+
+mixin social(items,type)
+	if type===undefined
+		each item in items
+			li.social__item
+				a(href=item.href)
+					svg(src="images/social/" + item.img + ".svg", alt=item.img)
+	else
+		each item in items
+			li.social__item(class=type)
+				a(href=item.href)
+					img(xmlns="http://www.w3.org/2000/svg", viewBox="item.veiwbox")
+
+mixin menu(items,type)
+	each item in items
+		li(class=type)
+			a(href=item.href)=item.name
 
 mixin date(date, time)
-	p.date #{date} #[span.clock] #{time}
+	.date #{date} #[span.clock] #{time}
 
-mixin discuss(like,dislike,view,comment)
-	.discuss #[span.like] #{like} #[span.dislike] #{dislike} #[span.view] #{view} #[span.comment] #{comment}
+mixin main__item(items)
+	each item in items
+		.main__item.main-content
+			figure
+				img(src="images/main/" + item.img + ".png", alt=item.alt)
+				figcaption=item.fig
+			+date(item.date, item.time)
+			p.main__text=item.text
+			.main-content__overlay
+				+discuss(item.type,item.like, item.dislike, item.view, item.comment)
+
+mixin discuss(type,like,dislike,view,comment)
+	if type===undefined
+		type=''
+		.discuss #[span.like] #{like} #[span.dislike] #{dislike} #[span.view] #{view} #[span.comment] #{comment}
+	else
+		.discuss(class=type) #[span.like] #{like} #[span.dislike] #{dislike} #[span.view] #{view} #[span.comment] #{comment}
+
+
+mixin sidebar__item(items)
+		each item in items
+			div(class=item.class)
+				if item.class==='sidebar__item-news'
+					span.number=item.num
+					+date(item.date, item.time)
+					p.sidebar__text=item.text
+					+discuss(item.like, item.dislike, item.view, item.comment)
+				else
+					+date(item.date, item.time)
+					p.sidebar__text=item.text
+					+discuss(item.like, item.dislike, item.view, item.comment)
+

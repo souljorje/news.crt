@@ -1,5 +1,5 @@
 header
-	nav#navbar.navbar
+	nav.navbar
 		.container
 			.navbar-header
 				//Menu button
@@ -10,42 +10,41 @@ header
 					span.icon-bar
 				.navbar-brand
 			nav.collapse.navbar-collapse(role='navigation')
-				.navbar__block
-					ul.nav.navbar-nav
-						li
-							a(href="#") Мастхев
-						li
-							a(href="#") Журналы
-						li
-							a(href="#") Смотрят звезды
-						li
-							a(href="#") Афиша
-					.block__map
+				.navbar__block.block-nav
+					ul.block-nav__nav.main-nav.nav.navbar-nav
+						+menu([{
+						href:'#',
+						name:'О проекте'
+						},
+						{
+						href:'#',
+						name:'Партнеры'
+						},
+						{
+						href:'#',
+						name:'Пресса о нас'
+						},
+						{
+						href:'#',
+						name:'Контакты'
+						}
+						], 'main-nav__item')
+					.block-nav__map
 						span.map Карта студенческих СМИ Москвы
-					.block__social.nav.navbar-nav
-						li
-							a(href="#")
-								img(src="img/icons/.png", alt="")
-						li
-							a(href="#")
-								img(src="img/icons/.png", alt="")
-						li
-							a(href="#")
-								img(src="img/icons/.png", alt="")
-						li
-							a(href="#")
-								img(src="img/icons/.png", alt="")
-						li
-							a(href="#")
-								img(src="img/icons/.png", alt="")
-						li
-							a(href="#")
-								img(src="img/icons/.png", alt="")
-						li
-							a(href="#")
-								img(src="img/icons/.png", alt="")
-				.navbar__block
-					.block__nav-left
+					.block-nav__social.social.nav.navbar-nav
+						ul
+							+social([
+							{href: '#', img:'vk'},
+							{href: '#', img:'google'},
+							{href: '#', img:'youtube'},
+							{href: '#', img:'instagram'},
+							{href: '#', img:'fb'},
+							{href: '#', img:'ok'},
+							{href: '#', img:'twitter'},
+							])
+
+				.navbar__block.block-logo
+					.block-logo__help.block-logo__help_left
 						a(href="#")
 							figure
 								img(src="#", alt="")
@@ -55,10 +54,10 @@ header
 								img(src="#", alt="")
 								figcaption Слабовидящим
 
-					.block__brand
+					.block-logo__brand
 						img(src="", alt="")
 
-					.block__nav-left
+					.block-logo__help.block-logo__help_right
 						a(href="#")
 							figure
 								img(src="#", alt="")
@@ -67,17 +66,33 @@ header
 							figure
 								img(src="#", alt="")
 								figcaption Войти
-				.navbar__block
-					ul.nav.navbar-nav
-						li
-							a(href="#") Новости
-						li
-							a(href="#") Блоги
-						li
-							a(href="#") Мастхев
-						li
-							a(href="#") Журналы
-						li
-							a(href="#") Смотрят звезды
-						li
-							a(href="#") Афиша
+				.navbar__block.block-menu
+					ul.block-menu__menu.navbar-menu.nav.navbar-nav
+						+menu([
+						{href: '#', name: 'Новости'},
+						{href: '#', name: 'Блоги'},
+						{href: '#', name: 'Мастхев'},
+						{href: '#', name: 'Журналы'},
+						{href: '#', name: 'Смотрят звезды'},
+						{href: '#', name: 'Афиша'}
+						], 'block-menu__item')
+
+			.navbar__block.block-mobile
+				.block-logo__help.block-logo__help_left
+					a(href="#")
+						figure
+							img(src="#", alt="")
+							figcaption Поиск
+					a(href="#")
+						figure
+							img(src="#", alt="")
+							figcaption Слабовидящим
+				.block-logo__help.block-logo__help_left
+					a(href="#")
+						figure
+							img(src="#", alt="")
+							figcaption Регистрация
+					a(href="#")
+						figure
+							img(src="#", alt="")
+							figcaption Войти

@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar" id="navbar">
+      <nav class="navbar">
         <div class="container">
           <div class="navbar-header">
             <!--Menu button-->
@@ -24,34 +24,43 @@
             <div class="navbar-brand"></div>
           </div>
           <nav class="collapse navbar-collapse" role="navigation">
-            <div class="navbar__block">
-              <ul class="nav navbar-nav">
-                <li><a href="#">Мастхев</a></li>
-                <li><a href="#">Журналы</a></li>
-                <li><a href="#">Смотрят звезды</a></li>
-                <li><a href="#">Афиша</a></li>
+            <div class="navbar__block block-nav">
+              <ul class="block-nav__nav main-nav nav navbar-nav">
+                <li class="main-nav__item"><a href="#">О проекте</a></li>
+                <li class="main-nav__item"><a href="#">Партнеры</a></li>
+                <li class="main-nav__item"><a href="#">Пресса о нас</a></li>
+                <li class="main-nav__item"><a href="#">Контакты</a></li>
               </ul>
-              <div class="block__map"><span class="map">Карта студенческих СМИ Москвы</span></div>
-              <div class="block__social nav navbar-nav">
-                <li><a href="#"><img src="img/icons/.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/.png" alt=""></a></li>
+              <div class="block-nav__map"><span class="map">Карта студенческих СМИ Москвы</span></div>
+              <div class="block-nav__social social nav navbar-nav">
+                <ul>
+                  <li class="social__item"><a href="#">
+                      <svg src="images/social/vk.svg" alt="vk"></svg></a></li>
+                  <li class="social__item"><a href="#">
+                      <svg src="images/social/google.svg" alt="google"></svg></a></li>
+                  <li class="social__item"><a href="#">
+                      <svg src="images/social/youtube.svg" alt="youtube"></svg></a></li>
+                  <li class="social__item"><a href="#">
+                      <svg src="images/social/instagram.svg" alt="instagram"></svg></a></li>
+                  <li class="social__item"><a href="#">
+                      <svg src="images/social/fb.svg" alt="fb"></svg></a></li>
+                  <li class="social__item"><a href="#">
+                      <svg src="images/social/ok.svg" alt="ok"></svg></a></li>
+                  <li class="social__item"><a href="#">
+                      <svg src="images/social/twitter.svg" alt="twitter"></svg></a></li>
+                </ul>
               </div>
             </div>
-            <div class="navbar__block">
-              <div class="block__nav-left"><a href="#">
+            <div class="navbar__block block-logo">
+              <div class="block-logo__help block-logo__help_left"><a href="#">
                   <figure><img src="#" alt="">
                     <figcaption>Поиск</figcaption>
                   </figure></a><a href="#">
                   <figure><img src="#" alt="">
                     <figcaption>Слабовидящим</figcaption>
                   </figure></a></div>
-              <div class="block__brand"><img src="" alt=""></div>
-              <div class="block__nav-left"><a href="#">
+              <div class="block-logo__brand"><img src="" alt=""></div>
+              <div class="block-logo__help block-logo__help_right"><a href="#">
                   <figure><img src="#" alt="">
                     <figcaption>Регистрация</figcaption>
                   </figure></a><a href="#">
@@ -59,83 +68,205 @@
                     <figcaption>Войти</figcaption>
                   </figure></a></div>
             </div>
-            <div class="navbar__block">
-              <ul class="nav navbar-nav">
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Блоги</a></li>
-                <li><a href="#">Мастхев</a></li>
-                <li><a href="#">Журналы</a></li>
-                <li><a href="#">Смотрят звезды</a></li>
-                <li><a href="#">Афиша</a></li>
+            <div class="navbar__block block-menu">
+              <ul class="block-menu__menu navbar-menu nav navbar-nav">
+                <li class="block-menu__item"><a href="#">Новости</a></li>
+                <li class="block-menu__item"><a href="#">Блоги</a></li>
+                <li class="block-menu__item"><a href="#">Мастхев</a></li>
+                <li class="block-menu__item"><a href="#">Журналы</a></li>
+                <li class="block-menu__item"><a href="#">Смотрят звезды</a></li>
+                <li class="block-menu__item"><a href="#">Афиша</a></li>
               </ul>
             </div>
           </nav>
+          <div class="navbar__block block-mobile">
+            <div class="block-logo__help block-logo__help_left"><a href="#">
+                <figure><img src="#" alt="">
+                  <figcaption>Поиск</figcaption>
+                </figure></a><a href="#">
+                <figure><img src="#" alt="">
+                  <figcaption>Слабовидящим</figcaption>
+                </figure></a></div>
+            <div class="block-logo__help block-logo__help_left"><a href="#">
+                <figure><img src="#" alt="">
+                  <figcaption>Регистрация</figcaption>
+                </figure></a><a href="#">
+                <figure><img src="#" alt="">
+                  <figcaption>Войти</figcaption>
+                </figure></a></div>
+          </div>
         </div>
       </nav>
     </header>
-    <div class="page-wrap">
-      <div class="container">
-        <div class="page-heading">
-          <p>Первое <span class="dot"></span> Новости</p>
-        </div>
-        <section class="main">
-          <div class="main__heading">
-            <h1>Новости</h1>
-          </div>
-          <nav class="main__menu menu">
-            <li class="menu__item"><a class="menu__link" href="#">Технологии</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Транспорт</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">События</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Спорт</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Вузы</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Волонотерство</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Наука</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Анонсы</a></li>
-            <li class="menu__item"><a class="menu__link-last" href="#">Ещё +</a></li>
-          </nav>
-          <div class="main__body">
-            <div class="main__item">
-              <figure><img src="img/main/main-item-1.png" alt="">
-                <figcaption></figcaption>
-              </figure>
-              <p class="date">20 января <span class="clock"></span> 15:42</p>
-              <p class="item__text"></p>
-            </div>
-            <div class="main__item">
-              <figure><img src="img/main/main-item-1.png" alt="">
-                <figcaption></figcaption>
-              </figure>
-              <p class="date">20 января <span class="clock"></span> 15:42</p>
-              <p class="item__text"></p>
-            </div>
-            <div class="main__item">
-              <figure><img src="img/main/main-item-1.png" alt="">
-                <figcaption></figcaption>
-              </figure>
-              <p class="date">20 января <span class="clock"></span> 15:42</p>
-              <p class="item__text"></p>
-            </div>
-          </div>
-        </section>
-        <section class="sidebar">
-          <div class="news">
-            <div class="news__heading">
-              <h2>Главные новости</h2>
-            </div>
-            <ul class="news__dates">
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-            </ul>
-            <div class="news__item"><span class="number"></span>
-              <p class="date">20 января <span class="clock"></span> 15:42</p>
-              <p class="sidebar__text">8 советов от детей, как родителям вести себя в соцсетях и не только</p>
-              <div class="discuss"><span class="like"></span> 25 <span class="dislike"></span> 3 <span class="view"></span> 4896 <span class="comment"></span> 5</div>
-            </div>
-          </div>
-        </section>
+    <div class="page container">
+      <div class="page__heading">
+        <p>Первое <span class="dot"></span> Новости</p>
       </div>
+      <section class="main">
+        <div class="main__heading">
+          <h1>Новости</h1>
+        </div>
+        <nav class="main__menu menu">
+          <li class="menu__item"><a href="#">Технологии</a></li>
+          <li class="menu__item"><a href="#">Транспорт</a></li>
+          <li class="menu__item"><a href="#">События</a></li>
+          <li class="menu__item"><a href="#">Спорт</a></li>
+          <li class="menu__item"><a href="#">Вузы</a></li>
+          <li class="menu__item"><a href="#">Волонотерство</a></li>
+          <li class="menu__item"><a href="#">Наука</a></li>
+          <li class="menu__item"><a href="#">Анонсы</a></li>
+          <li class="menu__item menu__item-last"><a href="#">Ещё +</a></li>
+        </nav>
+        <div class="main__body">
+          <div class="main__item main-content">
+            <figure><img src="images/main/main-item-1.png" alt="alt1">
+              <figcaption>Искусство</figcaption>
+            </figure>
+            <div class="date">14 апреля <span class="clock"></span> 4:20</div>
+            <p class="main__text">В Государственной Третьяковской галерее открыта выставка Марка Шагала</p>
+            <div class="main-content__overlay">
+              <div class="discuss discuss_main"><span class="like"></span> 44 <span class="dislike"></span> 2 <span class="view"></span> 9644 <span class="comment"></span> 16</div>
+            </div>
+          </div>
+          <div class="main__item main-content">
+            <figure><img src="images/main/main-item-1.png" alt="alt2">
+              <figcaption>Мода</figcaption>
+            </figure>
+            <div class="date">14 апреля <span class="clock"></span> 4:20</div>
+            <p class="main__text">«Субкультура в моде — временное явление»: Стилисты о трендах нового сезона</p>
+            <div class="main-content__overlay">
+              <div class="discuss discuss_main"><span class="like"></span> 44 <span class="dislike"></span> 2 <span class="view"></span> 9644 <span class="comment"></span> 16</div>
+            </div>
+          </div>
+          <div class="main__item main-content">
+            <figure><img src="images/main/main-item-1.png" alt="alt3">
+              <figcaption>Образование</figcaption>
+            </figure>
+            <div class="date">14 апреля <span class="clock"></span> 4:20</div>
+            <p class="main__text">Профессиональное выгорание выпускников: когда лучше взять годовой перерыв перед вузом</p>
+            <div class="main-content__overlay">
+              <div class="discuss discuss_main"><span class="like"></span> 44 <span class="dislike"></span> 2 <span class="view"></span> 9644 <span class="comment"></span> 16</div>
+            </div>
+          </div>
+        </div>
+        <div class="button main__button">Загрузить ещё</div>
+      </section>
+      
+      <section class="sidebar">
+        <div class="sidebar__news">
+          <h2 class="sidebar__heading">Главные новости</h2>
+          <ul class="news__dates">
+            <li><a href="#">Сегодня</a></li><span class="dot"></span>
+            <li><a href="#">Неделя</a></li><span class="dot"></span>
+            <li><a href="#">Месяц</a></li>
+          </ul>
+          <div class="sidebar__item-news"><span class="number">1</span>
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">8 советов от детей, как родителям вести себя в соцсетях и не только</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar__item-news"><span class="number">2</span>
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Прогрессоры: новая волна</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar__item-news"><span class="number">3</span>
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Тотемская культурная аномалия</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar__item-news"><span class="number">4</span>
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Тотемская культурная аномалия</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div><a class="sidebar__link">Все статьи</a>
+        </div>
+        
+        <button class="sidebar__button">Предложить новость</button>
+        
+        <div class="sidebar__blog">
+          <h2 class="sidebar__heading">Новое в блогах</h2>
+          <div class="sidebar-item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">8 советов от детей, как родителям вести себя в соцсетях и не только</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar-item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Прогрессоры: новая волна</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar-item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Тотемская культурная аномалия</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar-item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Тотемская культурная аномалия</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div><a class="sidebar__link">Все статьи</a>
+        </div>
+        
+        <div class="sidebar__musthave">
+          <h2 class="sidebar__heading">Мастхев</h2>
+          <div class="sidebar__item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">8 советов от детей, как родителям вести себя в соцсетях и не только</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar__item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Прогрессоры: новая волна</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar__item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Тотемская культурная аномалия</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div>
+          <div class="sidebar__item">
+            <div class="date">14 марта <span class="clock"></span> 16:20</div>
+            <p class="sidebar__text">Тотемская культурная аномалия</p>
+            <div class="discuss 44"><span class="like"></span> 2 <span class="dislike"></span> 9644 <span class="view"></span> 16 <span class="comment"></span> </div>
+          </div><a class="sidebar__link">Все статьи</a>
+        </div>
+        
+        <div class="sidebar__banner sidebar__banner-1"><img src="images/banners/" alt="banner"></div>
+        <div class="sidebar__banner sidebar__banner-2"><img src="images/banners/" alt="banner"></div>
+        <div class="sidebar__banner sidebar__banner-3"><img src="images/banners/" alt="banner"></div>
+      </section>
     </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer__menu menu-footer">
+          <li class="menu-footer__item"><a href="#">Новости</a></li>
+          <li class="menu-footer__item"><a href="#">Блоги</a></li>
+          <li class="menu-footer__item"><a href="#">Мастхэв</a></li>
+          <li class="menu-footer__item"><a href="#">Журналы</a></li>
+          <li class="menu-footer__item"><a href="#">Смотрят звезды</a></li>
+          <li class="menu-footer__item"><a href="#">Афиша</a></li>
+        </nav>
+        <div class="footer__logo"></div>
+        <div class="footer__social social social_footer">
+          <div class="footer__map"><span class="map">Карта студенческих СМИ Москвы</span></div>
+          <ul>
+            <li class="social__item social-footer"><a href="#"><img xmlns="http://www.w3.org/2000/svg" viewBox="item.veiwbox"></a></li>
+            <li class="social__item social-footer"><a href="#"><img xmlns="http://www.w3.org/2000/svg" viewBox="item.veiwbox"></a></li>
+            <li class="social__item social-footer"><a href="#"><img xmlns="http://www.w3.org/2000/svg" viewBox="item.veiwbox"></a></li>
+            <li class="social__item social-footer"><a href="#"><img xmlns="http://www.w3.org/2000/svg" viewBox="item.veiwbox"></a></li>
+            <li class="social__item social-footer"><a href="#"><img xmlns="http://www.w3.org/2000/svg" viewBox="item.veiwbox"></a></li>
+            <li class="social__item social-footer"><a href="#"><img xmlns="http://www.w3.org/2000/svg" viewBox="item.veiwbox"></a></li>
+            <li class="social__item social-footer"><a href="#"><img xmlns="http://www.w3.org/2000/svg" viewBox="item.veiwbox"></a></li>
+            <li class="social-test"><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="footer__terms">
+          <p>2017 © Первое студенческое агентство. При использовании материалов ссылка на источник обязательна.</p>
+        </div>
+      </div>
+    </footer>
     <!--build:js vendor.min.js-->
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>

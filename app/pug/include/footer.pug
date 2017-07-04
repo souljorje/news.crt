@@ -1,0 +1,29 @@
+footer.footer
+	.container
+		nav.footer__menu.menu-footer
+			+menu([
+			{href: '#', name: 'Новости'},
+			{href: '#', name: 'Блоги'},
+			{href: '#', name: 'Мастхэв'},
+			{href: '#', name: 'Журналы'},
+			{href: '#', name: 'Смотрят звезды'},
+			{href: '#', name: 'Афиша'}
+			], 'menu-footer__item')
+		.footer__logo
+		.footer__social.social.social_footer
+			.footer__map
+				span.map Карта студенческих СМИ Москвы
+			ul
+				+social([
+				{href: '#', img:'vk'},
+				{href: '#', img:'google'},
+				{href: '#', img:'youtube'},
+				{href: '#', img:'instagram'},
+				{href: '#', img:'fb'},
+				{href: '#', img:'ok'},
+				{href: '#', img:'twitter'},
+				], 'social-footer')
+				+social_test('#')
+
+		.footer__terms
+			p 2017 © Первое студенческое агентство. При использовании материалов ссылка на источник обязательна.

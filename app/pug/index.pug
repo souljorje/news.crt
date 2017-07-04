@@ -17,68 +17,139 @@ block css
 
 block content
 	include include/header
-	.page-wrap
-		.container
-			.page-heading
-				p Первое #[span.dot] Новости
-			section.main
-				.main__heading
-					h1 Новости
-				nav.main__menu.menu
-					li.menu__item
-						a(href='#').menu__link Технологии
-					li.menu__item
-						a(href='#').menu__link Транспорт
-					li.menu__item
-						a(href='#').menu__link События
-					li.menu__item
-						a(href='#').menu__link Спорт
-					li.menu__item
-						a(href='#').menu__link Вузы
-					li.menu__item
-						a(href='#').menu__link Волонотерство
-					li.menu__item
-						a(href='#').menu__link Наука
-					li.menu__item
-						a(href='#').menu__link Анонсы
-					li.menu__item
-						a(href='#').menu__link-last Ещё +
-				.main__body
-					.main__item
-						figure
-							img(src="img/main/main-item-1.png", alt="")
-							figcaption
-						+date('20 января', '15:42')
-						p.item__text
-					.main__item
-						figure
-							img(src="img/main/main-item-1.png", alt="")
-							figcaption
-						+date('20 января', '15:42')
-						p.item__text
-					.main__item
-						figure
-							img(src="img/main/main-item-1.png", alt="")
-							figcaption
-						+date('20 января', '15:42')
-						p.item__text
-
-			section.sidebar
-				.news
-					.news__heading
-						h2 Главные новости
-					ul.news__dates
-						li
-							a(href="#")
-						li
-							a(href="#")
-						li
-							a(href="#")
-					.news__item
-						span.number
-						+date('20 января', '15:42')
-						p.sidebar__text 8 советов от детей, как родителям вести себя в соцсетях и не только
-						+discuss('25', '3', '4896', '5')
+	.page.container
+		.page__heading
+			p Первое #[span.dot] Новости
+		section.main
+			.main__heading
+				h1 Новости
+			nav.main__menu.menu
+				+menu([
+				{href: '#', name: 'Технологии'},
+				{href: '#', name: 'Транспорт'},
+				{href: '#', name: 'События'},
+				{href: '#', name: 'Спорт'},
+				{href: '#', name: 'Вузы'},
+				{href: '#', name: 'Волонотерство'},
+				{href: '#', name: 'Наука'},
+				{href: '#', name: 'Анонсы'},
+				], 'menu__item')
+				li.menu__item.menu__item-last
+					a(href='#') Ещё +
+			.main__body
+				+main__item([
+				{img:'main-item-1', alt:'alt1', fig:'Искусство',
+				date:'14 апреля', time:'4:20',
+				text:'В Государственной Третьяковской галерее открыта выставка Марка Шагала',
+				type:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([{img:'main-item-1', alt:'alt2', fig:'Мода',
+				date:'14 апреля', time:'4:20',
+				text:'«Субкультура в моде — временное явление»: Стилисты о трендах нового сезона',
+				type:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([{img:'main-item-1', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Профессиональное выгорание выпускников: когда лучше взять годовой перерыв перед вузом',
+				type:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+			.button.main__button Загрузить ещё
+		|
+		|
+		section.sidebar
+			.sidebar__news
+				h2.sidebar__heading Главные новости
+				ul.news__dates
+					li
+						a(href="#") Сегодня
+					span.dot
+					li
+						a(href="#") Неделя
+					span.dot
+					li
+						a(href="#") Месяц
+				+sidebar__item([{
+				class:'sidebar__item-news', num:'1', date:'14 марта', time:'16:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях и не только',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar__item-news', num:'2', date:'14 марта', time:'16:20',
+				text:'Прогрессоры: новая волна',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar__item-news', num:'3', date:'14 марта', time:'16:20',
+				text:'Тотемская культурная аномалия',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar__item-news', num:'4', date:'14 марта', time:'16:20',
+				text:'Тотемская культурная аномалия',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				a.sidebar__link Все статьи
+			|
+			|
+			button.sidebar__button Предложить новость
+			|
+			|
+			.sidebar__blog
+				h2.sidebar__heading Новое в блогах
+				+sidebar__item([{
+				class:'sidebar-item', date:'14 марта', time:'16:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях и не только',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar-item', date:'14 марта', time:'16:20',
+				text:'Прогрессоры: новая волна',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar-item', date:'14 марта', time:'16:20',
+				text:'Тотемская культурная аномалия',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar-item', date:'14 марта', time:'16:20',
+				text:'Тотемская культурная аномалия',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				a.sidebar__link Все статьи
+			|
+			|
+			.sidebar__musthave
+				h2.sidebar__heading Мастхев
+				+sidebar__item([{
+				class:'sidebar__item', date:'14 марта', time:'16:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях и не только',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar__item', date:'14 марта', time:'16:20',
+				text:'Прогрессоры: новая волна',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar__item', date:'14 марта', time:'16:20',
+				text:'Тотемская культурная аномалия',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				+sidebar__item([{
+				class:'sidebar__item', date:'14 марта', time:'16:20',
+				text:'Тотемская культурная аномалия',
+				like:'44', dislike:'2', view:'9644', comment:'16'
+				}])
+				a.sidebar__link Все статьи
+			|
+			|
+			.sidebar__banner.sidebar__banner-1
+				img(src="images/banners/", alt="banner")
+			.sidebar__banner.sidebar__banner-2
+				img(src="images/banners/", alt="banner")
+			.sidebar__banner.sidebar__banner-3
+				img(src="images/banners/", alt="banner")
+	|
+	|
+	include include/footer
 
 block scripts
 	//build:js vendor.min.js
