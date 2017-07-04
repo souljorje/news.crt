@@ -12,15 +12,6 @@ mixin description(desc)
 mixin keywords(keys)
 	meta(name="keywords" content=keys)
 
-
-mixin social__footer(href)
-	li.social__item.social_footer__item
-		a(href=href)
-
-mixin social(href)
-	li.social__item
-		a(href=href)
-
 //- mixin social(items,type)
 //- 	if type===undefined
 //- 		each item in items
@@ -33,10 +24,10 @@ mixin social(href)
 //- 				a(href=item.href)
 //- 					include ../../images/social/vk.svg
 
-mixin menu(items,type)
+mixin menu(items,li,a)
 	each item in items
-		li(class=type)
-			a(href=item.href)=item.name
+		li(class=li)
+			a(class=a, href=item.href)=item.name
 
 mixin date(date, time)
 	.date #{date} #[span.clock] #{time}

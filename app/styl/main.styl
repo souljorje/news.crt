@@ -3,10 +3,49 @@
 //Normalize
 normalize-html5()
 
+ul
+	padding-left 0
+	margin 0
 //Global-styles
 
 body
 	background-color #f9f9fa
+	font-size 16px
 
 h1
 	font-size 2.25em
+	font-family regular
+
+h2
+	font-size 1.875em
+	font-family regular
+
+//header styles
+
+header
+	min-height 260px
+	background-color #fff
+	.navbar
+		&__block
+			width 100%
+			display flex
+			justify-content space-between
+		&-brand
+			display none
+	.block-nav
+		padding 20px 0
+		list-style-type none
+		display flex
+		justify-content space-between
+		&__list
+			font-family regular
+			font-size 0.875em
+			display inline-block
+			margin 0 8px
+		&__link
+			color #babac6
+		&__map
+			svg
+				height 20px
+				fill #262053
+

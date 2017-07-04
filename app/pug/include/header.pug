@@ -9,28 +9,21 @@ header
 					span.icon-bar
 					span.icon-bar
 				.navbar-brand
+					include ../../images/icons/logo.svg
 			nav.collapse.navbar-collapse(role='navigation')
 				.navbar__block.block-nav
-					ul.block-nav__nav.main-nav.nav.navbar-nav
-						+menu([{
-						href:'#',
-						name:'О проекте'
-						},
-						{
-						href:'#',
-						name:'Партнеры'
-						},
-						{
-						href:'#',
-						name:'Пресса о нас'
-						},
-						{
-						href:'#',
-						name:'Контакты'
-						}
-						], 'main-nav__item')
+					ul.block-nav__nav
+						+menu([
+						{href:'#', name:'О проекте'},
+						{href:'#', name:'Партнеры'},
+						{href:'#', name:'Пресса о нас'},
+						{href:'#', name:'Контакты'}
+						],
+						'block-nav__list', 'block-nav__link')
 					.block-nav__map
-						span.map Карта студенческих СМИ Москвы
+						figure
+							include ../../images/icons/map.svg
+							figcaption Карта студенческих СМИ Москвы
 					.block-nav__social.nav.navbar-nav
 						ul.social
 							li.social__item
@@ -59,11 +52,11 @@ header
 					.block-logo__help.block-logo__help_left
 						a(href="#")
 							figure
-								img(src="#", alt="")
+								include ../../images/icons/search.svg
 								figcaption Поиск
 						a(href="#")
 							figure
-								img(src="#", alt="")
+								include ../../images/icons/eye.svg
 								figcaption Слабовидящим
 
 					.block-logo__brand
@@ -72,11 +65,11 @@ header
 					.block-logo__help.block-logo__help_right
 						a(href="#")
 							figure
-								img(src="#", alt="")
+								include ../../images/icons/signin.svg
 								figcaption Регистрация
 						a(href="#")
 							figure
-								img(src="#", alt="")
+								include ../../images/icons/signup.svg
 								figcaption Войти
 				.navbar__block.block-menu
 					ul.block-menu__menu.navbar-menu.nav.navbar-nav
@@ -87,7 +80,7 @@ header
 						{href: '#', name: 'Журналы'},
 						{href: '#', name: 'Смотрят звезды'},
 						{href: '#', name: 'Афиша'}
-						], 'block-menu__item')
+						], 'block-menu__item', 'block-menu__link')
 
 			.navbar__block.block-mobile
 				.block-logo__help.block-logo__help_left
