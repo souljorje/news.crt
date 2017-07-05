@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+		browserSync = require('browser-sync'), //Livereload
 		pug = require('gulp-pug'), //Pug to HTML
 		prettify = require('gulp-jsbeautifier'), //Prettify HTML after Pug
 		stylus = require('gulp-stylus'), //Stylus to CSS
@@ -6,16 +7,16 @@ var gulp = require('gulp'),
 		nib = require('nib'), //Stylus library
 		rupture	= require('rupture'), //Stylus library
 		concat = require('gulp-concat'), //Concatenate files
-		browserSync = require('browser-sync'), //Livereload
 		uglify = require('gulp-uglify'), //Minify JS
 		csso = require('gulp-csso'), //Minify CSS
 		short = require('gulp-shorthand'), //Optimize CSS
 		prefix = require('gulp-autoprefixer'), //Add browser prefixes
 		fontmin = require('gulp-fontmin'), //TTF to EOT, OTF, WOFF, SVG + Font-face
-		tinypng = require('gulp-tinypng-extended'), //Optimze images via https://tinypng.com 
+		tinypng = require('gulp-tinypng-extended'), //Optimze images via https://tinypng.com
+		svgmin = require('gulp-svgmin'), //Optimize SVG
 		useref = require('gulp-useref'), //Simple production loader
 		gulpIf = require('gulp-if'), //Permit to choose file type for .pipe
-		del = require('del'); //Clear dist 
+		del = require('del'); //Clear dist
 
 // Livereload
 gulp.task('browser-sync', function() {
@@ -51,6 +52,18 @@ gulp.task('styles', function() {
 	.pipe(prefix('last 2 versions', 'ie 8', 'ie 9'))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('svg', function() {
+	gulp.src('app/images/**/*.svg')
+		.pipe(svgmin({
+			js2svg: {
+                pretty: true
+            }
+		}))
+		.pipe(gulp.dest(function(file) {
+			return file.base;
+		}));
 });
 
 // Oprimize images via https://tinypng.com
@@ -89,7 +102,7 @@ gulp.task('default', ['browser-sync', 'styles'], function(){
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
-// Parses JS and CSS files in .html 
+// Parses JS and CSS files in .html
 // Minifyes JS and CSS(+optimize)
 // Loads to production
 gulp.task('useref', ['styles'], function(){
