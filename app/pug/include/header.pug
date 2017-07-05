@@ -1,4 +1,4 @@
-header
+header.header
 	nav.navbar
 		.container
 			.navbar-header
@@ -11,68 +11,71 @@ header
 				.navbar-brand
 					include ../../images/icons/logo.svg
 			nav.collapse.navbar-collapse(role='navigation')
-				.navbar__block.block-nav
-					ul.block-nav__nav
+				.header__block.header-nav
+					ul.header-nav__nav
 						+menu([
 						{href:'#', name:'О проекте'},
 						{href:'#', name:'Партнеры'},
 						{href:'#', name:'Пресса о нас'},
 						{href:'#', name:'Контакты'}
 						],
-						'block-nav__list', 'block-nav__link')
-					.block-nav__map
+						'header-nav__list', 'header-nav__link')
+					.header-nav__map
 						figure
 							include ../../images/icons/map.svg
 							figcaption Карта студенческих СМИ Москвы
-					.block-nav__social.nav.navbar-nav
+					.header-nav__social
 						ul.social
-							li.social__item
-								a(href="#")
+							li.social__item.social__item_vk
+								a(href="#").social__link
 									include ../../images/social/vk.svg
-							li.social__item
-								a(href="#")
+							li.social__item.social__item_google
+								a(href="#").social__link
 									include ../../images/social/google.svg
-							li.social__item
-								a(href="#")
+							li.social__item.social__item_youtube
+								a(href="#").social__link
 									include ../../images/social/youtube.svg
-							li.social__item
-								a(href="#")
+							li.social__item.social__item_instagram
+								a(href="#").social__link
 									include ../../images/social/instagram.svg
-							li.social__item
-								a(href="#")
+							li.social__item.social__item_fb
+								a(href="#").social__link
 									include ../../images/social/fb.svg
-							li.social__item
-								a(href="#")
+							li.social__item.social__item_ok
+								a(href="#").social__link
 									include ../../images/social/ok.svg
-							li.social__item
-								a(href="#")
+							li.social__item.social__item_twitter
+								a(href="#").social__link
 									include ../../images/social/twitter.svg
+							li.social__item.social__item_test
+								a(href="#").social__link
+									include ../../images/social/hover.svg
 
-				.navbar__block.block-logo
-					.block-logo__help.block-logo__help_left
-						a(href="#")
+				.header__block.header-logo
+					.header-logo__help.header-logo__help_left
+						a(href="#").header-logo__link.header-logo__link_search
 							figure
 								include ../../images/icons/search.svg
 								figcaption Поиск
-						a(href="#")
+						a(href="#").header-logo__link.header-logo__link_eye
 							figure
 								include ../../images/icons/eye.svg
 								figcaption Слабовидящим
 
-					.block-logo__brand
-						img(src="", alt="")
+					.header-logo__brand
+						include ../../images/icons/logo.svg
 
-					.block-logo__help.block-logo__help_right
-						a(href="#")
+					.header-logo__help.block-logo__help_right
+						a(href="#").header-logo__link.header-logo__link_signin
 							figure
 								include ../../images/icons/signin.svg
 								figcaption Регистрация
-						a(href="#")
+						a(href="#").header-logo__link.header-logo__link_signup
 							figure
 								include ../../images/icons/signup.svg
 								figcaption Войти
-				.navbar__block.block-menu
-					ul.block-menu__menu.navbar-menu.nav.navbar-nav
+				.header__block.header-menu
+					ul.header-menu__menu
 						+menu([
 						{href: '#', name: 'Новости'},
 						{href: '#', name: 'Блоги'},
@@ -80,24 +83,24 @@ header
 						{href: '#', name: 'Журналы'},
 						{href: '#', name: 'Смотрят звезды'},
 						{href: '#', name: 'Афиша'}
-						], 'block-menu__item', 'block-menu__link')
+						], 'header-menu__list', 'header-menu__link')
 
-			.navbar__block.block-mobile
-				.block-logo__help.block-logo__help_left
-					a(href="#")
+			.header__block.header-mobile
+				.header-logo__help.header-logo__help_left
+					a(href="#").header-logo__link.header-logo__link_search
 						figure
-							img(src="#", alt="")
+							include ../../images/icons/search.svg
 							figcaption Поиск
-					a(href="#")
+					a(href="#").header-logo__link.header-logo__link_eye
 						figure
-							img(src="#", alt="")
+							include ../../images/icons/eye.svg
 							figcaption Слабовидящим
-				.block-logo__help.block-logo__help_left
-					a(href="#")
+				.header-logo__help.block-logo__help_right
+					a(href="#").header-logo__link.header-logo__link_signin
 						figure
-							img(src="#", alt="")
+							include ../../images/icons/signin.svg
 							figcaption Регистрация
-					a(href="#")
+					a(href="#").header-logo__link.header-logo__link_signup
 						figure
-							img(src="#", alt="")
+							include ../../images/icons/signup.svg
 							figcaption Войти
