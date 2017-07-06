@@ -30,41 +30,148 @@ block content
 				{href: '#', name: 'События'},
 				{href: '#', name: 'Спорт'},
 				{href: '#', name: 'Вузы'},
-				{href: '#', name: 'Волонотерство'},
+				{href: '#', name: 'Волонтерство'},
 				{href: '#', name: 'Наука'},
 				{href: '#', name: 'Анонсы'},
 				], 'menu__item', 'menu__link')
-				li.menu__item.menu__item-last
-					a(href='#') Ещё +
+				li.menu__item.menu__item
+					a(class='menu__link menu__link_last' href='#') Ещё +
 			.main__body
 				+main__item([
-				{img:'main-item-1', alt:'alt1', fig:'Искусство',
+				{id:'art',img:'main-item-1', alt:'alt1', fig:'Искусство',
 				date:'14 апреля', time:'4:20',
 				text:'В Государственной Третьяковской галерее открыта выставка Марка Шагала',
-				type:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
-				+main__item([{img:'main-item-1', alt:'alt2', fig:'Мода',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'fasion',img:'main-item-1', alt:'alt2', fig:'Мода',
 				date:'14 апреля', time:'4:20',
 				text:'«Субкультура в моде — временное явление»: Стилисты о трендах нового сезона',
-				type:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
-				+main__item([{img:'main-item-1', alt:'alt3', fig:'Образование',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'main-item-1', alt:'alt3', fig:'Образование',
 				date:'14 апреля', time:'4:20',
 				text:'Профессиональное выгорание выпускников: когда лучше взять годовой перерыв перед вузом',
-				type:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
-			.button.main__button Загрузить ещё
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'enjoy',img:'main-item-1', alt:'alt3', fig:'Развлечения',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Тотальный диктант можно будет написать 8 апреля в шести крупных вокзалах Москвы',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'sport',img:'main-item-1', alt:'alt3', fig:'Спорт',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'art',img:'main-item-1', alt:'alt1', fig:'Искусство',
+				date:'14 апреля', time:'4:20',
+				text:'В Государственной Третьяковской галерее открыта выставка Марка Шагала',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'fasion',img:'main-item-1', alt:'alt2', fig:'Мода',
+				date:'14 апреля', time:'4:20',
+				text:'«Субкультура в моде — временное явление»: Стилисты о трендах нового сезона',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'main-item-1', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Профессиональное выгорание выпускников: когда лучше взять годовой перерыв перед вузом',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'enjoy',img:'main-item-1', alt:'alt3', fig:'Развлечения',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Тотальный диктант можно будет написать 8 апреля в шести крупных вокзалах Москвы',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'sport',img:'main-item-1', alt:'alt3', fig:'Спорт',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'art',img:'main-item-1', alt:'alt1', fig:'Искусство',
+				date:'14 апреля', time:'4:20',
+				text:'В Государственной Третьяковской галерее открыта выставка Марка Шагала',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'fasion',img:'main-item-1', alt:'alt2', fig:'Мода',
+				date:'14 апреля', time:'4:20',
+				text:'«Субкультура в моде — временное явление»: Стилисты о трендах нового сезона',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'main-item-1', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Профессиональное выгорание выпускников: когда лучше взять годовой перерыв перед вузом',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'enjoy',img:'main-item-1', alt:'alt3', fig:'Развлечения',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Тотальный диктант можно будет написать 8 апреля в шести крупных вокзалах Москвы',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'sport',img:'main-item-1', alt:'alt3', fig:'Спорт',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'art',img:'main-item-1', alt:'alt1', fig:'Искусство',
+				date:'14 апреля', time:'4:20',
+				text:'В Государственной Третьяковской галерее открыта выставка Марка Шагала',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'fasion',img:'main-item-1', alt:'alt2', fig:'Мода',
+				date:'14 апреля', time:'4:20',
+				text:'«Субкультура в моде — временное явление»: Стилисты о трендах нового сезона',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'main-item-1', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Профессиональное выгорание выпускников: когда лучше взять годовой перерыв перед вузом',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'enjoy',img:'main-item-1', alt:'alt3', fig:'Развлечения',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'education',img:'', alt:'alt3', fig:'Образование',
+				date:'14 апреля', time:'4:20',
+				text:'Тотальный диктант можно будет написать 8 апреля в шести крупных вокзалах Москвы',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+				+main__item([
+				{id:'sport',img:'main-item-1', alt:'alt3', fig:'Спорт',
+				date:'14 апреля', time:'4:20',
+				text:'8 советов от детей, как родителям вести себя в соцсетях',
+				discuss:'discuss_main', like:'44', dislike:'2', view:'9644', comment:'16'}])
+			button.main__button(href='#') Загрузить ещё
 		|
 		|
 		section.sidebar
-			.sidebar__news
+			.sidebar__block.sidebar__news
 				h2.sidebar__heading Главные новости
-				ul.news__dates
+				ul.sidebar__period.period
 					li
-						a(href="#") Сегодня
+						a(class='period__link', href='#') Сегодня
 					span.dot
 					li
-						a(href="#") Неделя
+						a(class='period__link', href='#') Неделя
 					span.dot
 					li
-						a(href="#") Месяц
+						a(class='period__link', href='#') Месяц
 				+sidebar__item([{
 				class:'sidebar__item-news', num:'1', date:'14 марта', time:'16:20',
 				text:'8 советов от детей, как родителям вести себя в соцсетях и не только',
@@ -85,71 +192,74 @@ block content
 				text:'Тотемская культурная аномалия',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
-				a.sidebar__link Все статьи
+				a.sidebar__link(href='#') Все статьи
 			|
 			|
-			button.sidebar__button Предложить новость
+			button.sidebar__button(href='#')
+				include ../images/icons/feather.svg
+				|Предложить новость
+
 			|
 			|
-			.sidebar__blog
+			.sidebar__block.sidebar__blog
 				h2.sidebar__heading Новое в блогах
 				+sidebar__item([{
-				class:'sidebar-item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'8 советов от детей, как родителям вести себя в соцсетях и не только',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
 				+sidebar__item([{
-				class:'sidebar-item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'Прогрессоры: новая волна',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
 				+sidebar__item([{
-				class:'sidebar-item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'Тотемская культурная аномалия',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
 				+sidebar__item([{
-				class:'sidebar-item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'Тотемская культурная аномалия',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
-				a.sidebar__link Все статьи
+				a.sidebar__link(href='#') Все статьи
 			|
 			|
-			.sidebar__musthave
+			.sidebar__block.sidebar__musthave
 				h2.sidebar__heading Мастхэв
 				+sidebar__item([{
-				class:'sidebar__item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'8 советов от детей, как родителям вести себя в соцсетях и не только',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
 				+sidebar__item([{
-				class:'sidebar__item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'Прогрессоры: новая волна',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
 				+sidebar__item([{
-				class:'sidebar__item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'Тотемская культурная аномалия',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
 				+sidebar__item([{
-				class:'sidebar__item', date:'14 марта', time:'16:20',
+				date:'14 марта', time:'16:20',
 				text:'Тотемская культурная аномалия',
 				like:'44', dislike:'2', view:'9644', comment:'16'
 				}])
-				a.sidebar__link Все статьи
+				a.sidebar__link(href='#') Все статьи
 			|
 			|
-			.sidebar__banner.sidebar__banner-1
-				img(src="images/banners/", alt="banner")
-			.sidebar__banner.sidebar__banner-2
-				img(src="images/banners/", alt="banner")
-			.sidebar__banner.sidebar__banner-3
-				img(src="images/banners/", alt="banner")
+			.sidebar__block.sidebar__banner
+				img(src="images/banners/banner_1.jpg", alt="banner")
+			.sidebar__block.sidebar__banner.sidebar__banner_small
+				img(src="images/banners/banner_2.jpg", alt="banner")
+			.sidebar__block.sidebar__banner
+				img(src="images/banners/banner_3.jpg", alt="banner")
 	|
 	|
-	include include/footer
+	include include/footer.pug
 
 block scripts
 	//build:js vendor.min.js

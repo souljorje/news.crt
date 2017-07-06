@@ -30,37 +30,74 @@ mixin menu(items,li,a)
 			a(class=a, href=item.href)=item.name
 
 mixin date(date, time)
-	.date #{date} #[span.clock] #{time}
+	.date
+		|#{date}
+		include ../../images/icons/clock.svg
+		|#{time}
 
 mixin main__item(items)
 	each item in items
-		.main__item.main-content
-			figure
-				img(src="images/main/" + item.img + ".png", alt=item.alt)
-				figcaption=item.fig
-			+date(item.date, item.time)
-			p.main__text=item.text
-			.main-content__overlay
-				+discuss(item.type,item.like, item.dislike, item.view, item.comment)
+		a(class='main__item', href="#", id=item.id)
+			if item.img===''
+				figure
+					figcaption=item.fig
+					.main__overlay
+						+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
+				.main__content
+					+date(item.date, item.time)
+					p.main__text=item.text
+			else
+				figure
+					img(src="images/main/" + item.img + ".png", alt=item.alt)
+					figcaption=item.fig
+					.main__overlay
+						+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
+				.main__content
+					+date(item.date, item.time)
+					p.main__text=item.text
 
 mixin discuss(type,like,dislike,view,comment)
 	if type===undefined
 		type=''
-		.discuss #[span.like] #{like} #[span.dislike] #{dislike} #[span.view] #{view} #[span.comment] #{comment}
+		.discuss
+			.discuss__item.discuss__item_like
+				include ../../images/icons/like.svg
+				span.discuss__number #{like}
+			.discuss__item.discuss__item_dislike
+				include ../../images/icons/dislike.svg
+				span.discuss__number #{dislike}
+			.discuss__item.discuss__item_view
+				include ../../images/icons/view.svg
+				span.discuss__number #{view}
+			.discuss__item.discuss__item_comment
+				include ../../images/icons/comment.svg
+				span.discuss__number #{comment}
 	else
-		.discuss(class=type) #[span.like] #{like} #[span.dislike] #{dislike} #[span.view] #{view} #[span.comment] #{comment}
+		.discuss(class=type)
+			.discuss__item.discuss__item_like
+				include ../../images/icons/like.svg
+				span.discuss__number #{like}
+			.discuss__item.discuss__item_dislike
+				include ../../images/icons/dislike.svg
+				span.discuss__number #{dislike}
+			.discuss__item.discuss__item_view
+				include ../../images/icons/view.svg
+				span.discuss__number #{view}
+			.discuss__item.discuss__item_comment
+				include ../../images/icons/comment.svg
+				span.discuss__number #{comment}
 
 
 mixin sidebar__item(items)
 		each item in items
-			div(class=item.class)
+			div.sidebar__item(class=item.class)
 				if item.class==='sidebar__item-news'
 					span.number=item.num
 					+date(item.date, item.time)
 					p.sidebar__text=item.text
-					+discuss(item.like, item.dislike, item.view, item.comment)
+					+discuss('',item.like, item.dislike, item.view, item.comment)
 				else
 					+date(item.date, item.time)
 					p.sidebar__text=item.text
-					+discuss(item.like, item.dislike, item.view, item.comment)
+					+discuss('',item.like, item.dislike, item.view, item.comment)
 

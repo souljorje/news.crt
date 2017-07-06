@@ -1,6 +1,6 @@
 footer.footer
 	.container
-		nav.footer__menu.menu-footer
+		nav.footer__menu
 			+menu([
 			{href: '#', name: 'Новости'},
 			{href: '#', name: 'Блоги'},
@@ -8,15 +8,37 @@ footer.footer
 			{href: '#', name: 'Журналы'},
 			{href: '#', name: 'Смотрят звезды'},
 			{href: '#', name: 'Афиша'}
-			], 'menu-footer__item', 'menu-footer__link')
+			], 'footer__list', 'footer__link')
 		.footer__logo
-		.footer__links
+			include ../../images/icons/logo.svg
+		.footer__social
 			.footer__map
-				span.map Карта студенческих СМИ Москвы
+				a(href="#")
+					figure
+						include ../../images/icons/map.svg
+						figcaption Карта студенческих СМИ Москвы
 			ul.social.social_footer
-				li.social__item.siocial_footer__item
-					a(href="#")
-
+				li.social__item.social__item_vk
+					a(href="#").social__link
+						include ../../images/social/vk.svg
+				li.social__item.social__item_google
+					a(href="#").social__link
+						include ../../images/social/google.svg
+				li.social__item.social__item_youtube
+					a(href="#").social__link
+						include ../../images/social/youtube.svg
+				li.social__item.social__item_instagram
+					a(href="#").social__link
+						include ../../images/social/instagram.svg
+				li.social__item.social__item_fb
+					a(href="#").social__link
+						include ../../images/social/fb.svg
+				li.social__item.social__item_ok
+					a(href="#").social__link
+						include ../../images/social/ok.svg
+				li.social__item.social__item_twitter
+					a(href="#").social__link
+						include ../../images/social/twitter.svg
 
 		.footer__terms
 			p 2017 © Первое студенческое агентство. При использовании материалов ссылка на источник обязательна.
