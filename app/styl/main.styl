@@ -2,8 +2,9 @@
 @import 'include/mixins'
 
 //Normalize
-normalize-html5()
-
+normalize-css()
+figure
+	margin 0
 a,button
 	outline: none
 
@@ -20,15 +21,21 @@ body
 	font-size 16px
 
 h1
-	font(2.25, regular)
+	font-set(2.25, regular)
 	margin-top 0
 	margin-bottom 0
 
 h2
-	font(1.875,regular)
+	font-set(1.875,regular)
 
 svg
 	fill none
+
+.container
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto
 
 a
 	&:hover, &:focus
@@ -47,7 +54,7 @@ a
 		width 100%
 		margin-bottom 18px
 		p
-			font(0.875,medium)
+			font-set(0.875,medium)
 			text-align center
 			color gray
 			margin 0
@@ -71,7 +78,7 @@ a
 		display flex
 		justify-content space-between
 		&__link
-			font(0.75 ,medium)
+			font-set(0.75 ,medium)
 			text-transform uppercase
 			letter-spacing 0.2px
 			color gray
@@ -83,7 +90,7 @@ a
 				background-color #6103fc
 				border-color #6103fc
 			^[2]^[2]_last
-				font(0.8125em, bold)
+				font-set(0.8125em, bold)
 				border none
 				&:hover,&:focus
 					background-color transparent
@@ -107,7 +114,7 @@ a
 			position absolute
 			top 21px
 			left 19px
-			font(0.75em, medium)
+			font-set(0.75em, medium)
 			color #fff
 			text-transform uppercase
 			padding 2px 12px
@@ -149,7 +156,7 @@ a
 				align-items center
 				justify-content center
 				margin-right 18px
-				font(0.75,medium)
+				font-set(0.75,medium)
 				letter-spacing 0.2px
 				color gray
 				svg
@@ -182,7 +189,7 @@ a
 	&__content
 		padding 21px 24px
 		/.date
-			font(0.75, medium)
+			font-set(0.75, medium)
 			color gray
 			display inline-flex
 			align-items center
@@ -192,14 +199,14 @@ a
 				margin 0 8px
 	&__text
 		margin-top 14px
-		font(1.125, medium)
+		font-set(1.125, medium)
 		color #000
 		^[0]__item:hover &
 			color purple
 	&__button
 		width 100%
 		background-color purple
-		font(0.8125,bold)
+		font-set(0.8125,bold)
 		color #fff
 		text-transform uppercase
 		border none
@@ -247,7 +254,7 @@ a
 			height 22px
 			background-color #ff7725
 			border-radius 100%
-			font(0.875,bold)
+			font-set(0.875,bold)
 			color #fff
 	&__item
 		margin-top 41px
@@ -255,14 +262,14 @@ a
 	&__text
 		margin-top 10px
 		margin-bottom 19px
-		font(1, medium)
+		font-set(1, medium)
 	&__link
 		display flex
 		justify-content center
 		align-items center
 		position relative
 		padding 24px 0
-		font(0.8125, bold)
+		font-set(0.8125, bold)
 		color gray
 		text-transform uppercase
 		&:after
@@ -281,7 +288,7 @@ a
 		background-color #ff7725
 		border none
 		height 60px
-		font(0.815,bold)
+		font-set(0.815,bold)
 		text-transform uppercase
 		letter-spacing 0.6px
 		color #fff

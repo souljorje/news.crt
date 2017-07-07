@@ -2,7 +2,7 @@
 	margin-bottom 0
 .navbar-brand
 	display none
-.container .navbar-collapse
+.navbar-collapse
 	margin-left -15px
 	margin-right -15px
 
@@ -11,44 +11,45 @@
 	overflow hidden
 	&__block
 		width 100%
+		&:first-child,&:nth-child(2)
+			border-bottom 1px solid  #edeef0
+	&-nav
+		position relative
 		display flex
 		justify-content space-between
 		align-items center
-	&-nav
-		position relative
-		&:after
-			gray-line()
 		&__nav
 			display flex
 			justify-content space-between
 			width 28.97%
 			list-style-type none
-		&__list
-			font(0.875, regular)
 		&__link
+			font-set(0.875, regular)
 			color gray
 			&:hover, &:focus
 				color purple
-		&__map
+		/.map
 			padding 20px 0
 			margin-left -5.5%
 			position relative
 			transition 0.5s ease all
 			cursor pointer
-			figure
+			&__link
 				display flex
-			svg
+			&__icon
 				height 20px
-				stroke purple
-			figcaption
-				font(0.875, medium)
+				svg
+					height 20px
+					stroke purple
+			&__text
+				font-set(0.875, medium)
 				margin 0 8px 0 15px
 				letter-spacing 0.4px
 				color purple
 			&:after
 				content ''
 				position absolute
-				bottom -7px
+				bottom -8px
 				z-index 2
 				left -10px
 				right 0
@@ -71,7 +72,7 @@
 			&__link
 				display flex
 				align-items center
-			&__item
+			&__icon
 				svg
 					fill gray
 					^[-1]^[-1]_vk svg
@@ -110,28 +111,35 @@
 
 	&-logo
 		padding 32px 0 27px
-		&__help
+		display flex
+		justify-content space-between
+		align-items center
+		/.help
 			display flex
 			width 200px
 			justify-content space-between
-			font(0.75,bold)
-		&__link
-			text-align center
-			color #000
-			&:hover, &:focus
-				color purple
+			&__link
+				text-align center
+				color #000
+				&:hover, &:focus
+					color purple
+					.help__icon
+						svg
+							stroke purple
+			&__icon
 				svg
-					stroke purple
-			svg
-				stroke #000
-				^[-1]^[-1]_search svg
-					height 30px
-				^[-1]^[-1]_eye svg
-					height 34px
-				^[-1]^[-1]_signup svg
-					height 34px
-				^[-1]^[-1]_signin svg
-					height 34px
+					stroke #000
+					^[-1]^[-1]_search svg
+						height 30px
+					^[-1]^[-1]_eye svg
+						height 34px
+					^[-1]^[-1]_signup svg
+						height 34px
+					^[-1]^[-1]_signin svg
+						height 34px
+			&__text
+				font-set(0.75,bold)
+				text-transform uppercase
 			figcaption
 				text-transform uppercase
 				margin-top 12px
@@ -142,13 +150,10 @@
 				height 69px
 
 	&-menu
-		padding 20px 0 22px
+		padding 20px 0
 		display flex
 		justify-content center
 		position relative
-		&:before
-			gray-line()
-			top 0
 		&__menu
 			display flex
 			justify-content space-between
@@ -156,7 +161,7 @@
 			width 100%
 			max-width 770px
 		&__link
-			font(1,bold)
+			font-set(1,bold)
 			letter-spacing 0.4px
 			text-transform uppercase
 			color #000

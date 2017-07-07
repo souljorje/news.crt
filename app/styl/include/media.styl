@@ -1,7 +1,19 @@
 rupture.scale = 0 480px 767px 992px 1200px
 rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 
-// Custom media
+// Container
++above(768px)
+	.container
+		width 750px
+
++above(992px)
+	.container
+		width 970px
+
++above(1200px)
+	.container
+		width 1170px
+
 +above(1280px)
 	.container
 		width 1290px

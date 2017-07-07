@@ -1,56 +1,105 @@
 header.header
 	nav.navbar
-		.container
-			.navbar-header
-				//Menu button
-				button(type='button', data-toggle='collapse', data-target='.navbar-collapse').navbar-toggle
-					span.sr-only Навигация
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				.navbar-brand
-					include ../../images/icons/logo.svg
-			nav.collapse.navbar-collapse(role='navigation')
-				.header__block.header-nav
-					ul.header-nav__nav
-						+menu([
-						{href:'#', name:'О проекте'},
-						{href:'#', name:'Партнеры'},
-						{href:'#', name:'Пресса о нас'},
-						{href:'#', name:'Контакты'}
-						],
-						'header-nav__list', 'header-nav__link')
-					.header-nav__map
-						a(href="#")
-							figure
-								include ../../images/icons/map.svg
-								figcaption Карта студенческих СМИ Москвы
-					.header-nav__social
-						ul.social
-							li.social__item.social__item_vk
-								a(href="#").social__link
-									include ../../images/social/vk.svg
-							li.social__item.social__item_google
-								a(href="#").social__link
-									include ../../images/social/google.svg
-							li.social__item.social__item_youtube
-								a(href="#").social__link
-									include ../../images/social/youtube.svg
-							li.social__item.social__item_instagram
-								a(href="#").social__link
-									include ../../images/social/instagram.svg
-							li.social__item.social__item_fb
-								a(href="#").social__link
-									include ../../images/social/fb.svg
-							li.social__item.social__item_ok
-								a(href="#").social__link
-									include ../../images/social/ok.svg
-							li.social__item.social__item_twitter
-								a(href="#").social__link
-									include ../../images/social/twitter.svg
+		.navbar-header
+			//Menu button
+			button(type='button', data-toggle='collapse', data-target='.navbar-collapse').navbar-toggle
+				span.sr-only Навигация
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			.navbar-brand
+				include ../../images/icons/logo.svg
+		nav.collapse.navbar-collapse(role='navigation')
+			.header__block
+				.container
+					.header-nav
+						ul.header-nav__nav
+							+menu([
+							{href:'#', name:'О проекте'},
+							{href:'#', name:'Партнеры'},
+							{href:'#', name:'Пресса о нас'},
+							{href:'#', name:'Контакты'}
+							],
+							'header-nav__item', 'header-nav__link')
+						.map
+							a.map__link(href="#")
+								.map__icon
+									include ../../images/icons/map.svg
+								.map__text Карта студенческих СМИ Москвы
+						.header-nav__social
+							ul.social
+								li.social__item.social__item_vk
+									a(href="#").social__link
+										.social__icon.social__icon_vk
+											include ../../images/social/vk.svg
+								li.social__item.social__item_google
+									a(href="#").social__link
+										.social__icon.social__icon_google
+											include ../../images/social/google.svg
+								li.social__item.social__item_youtube
+									a(href="#").social__link
+										.social__icon.social__icon_youtube
+											include ../../images/social/youtube.svg
+								li.social__item.social__item_instagram
+									a(href="#").social__link
+										.social__icon.social__icon_instagram
+											include ../../images/social/instagram.svg
+								li.social__item.social__item_fb
+									a(href="#").social__link
+										.social__icon.social__icon_fb
+											include ../../images/social/fb.svg
+								li.social__item.social__item_ok
+									a(href="#").social__link
+										.social__icon.social__icon_ok
+											include ../../images/social/ok.svg
+								li.social__item.social__item_twitter
+									a(href="#").social__link
+										.social__icon.social__icon_twitter
+											include ../../images/social/twitter.svg
 
-				.header__block.header-logo
-					.header-logo__help.header-logo__help_left
+			.header__block
+				.container
+					.header-logo
+						.help
+							a.help__link(href="#")
+								.help__icon.help__icon_search
+									include ../../images/icons/search.svg
+								.help__text Поиск
+							a.help__link(href="#")
+								.help__icon.help__icon_eye
+									include ../../images/icons/eye.svg
+								.help__text Слабовидящим
+
+						.header-logo__brand
+							include ../../images/icons/logo.svg
+
+						.help
+							a.help__link(href="#")
+								.help__icon.help__icon_eye
+									include ../../images/icons/signup.svg
+								.help__text Регистрация
+							a.help__link(href="#")
+								.help__icon.help__icon_eye
+									include ../../images/icons/signin.svg
+								.help__text Войти
+
+			.header__block
+				.container
+					.header-menu
+						ul.header-menu__menu
+							+menu([
+							{href: '#', name: 'Новости'},
+							{href: '#', name: 'Блоги'},
+							{href: '#', name: 'Мастхэв'},
+							{href: '#', name: 'Журналы'},
+							{href: '#', name: 'Смотрят звезды'},
+							{href: '#', name: 'Афиша'}
+							], 'header-menu__list', 'header-menu__link')
+
+		.header__block
+			.container
+				.header-mobile
+					.header-logo__help
 						a(href="#").header-logo__link.header-logo__link_search
 							figure
 								include ../../images/icons/search.svg
@@ -59,46 +108,12 @@ header.header
 							figure
 								include ../../images/icons/eye.svg
 								figcaption Слабовидящим
-
-					.header-logo__brand
-						include ../../images/icons/logo.svg
-
-					.header-logo__help.block-logo__help_right
-						a(href="#").header-logo__link.header-logo__link_signup
-							figure
-								include ../../images/icons/signup.svg
-								figcaption Регистрация
+					.header-logo__help
 						a(href="#").header-logo__link.header-logo__link_signin
 							figure
 								include ../../images/icons/signin.svg
+								figcaption Регистрация
+						a(href="#").header-logo__link.header-logo__link_signup
+							figure
+								include ../../images/icons/signup.svg
 								figcaption Войти
-				.header__block.header-menu
-					ul.header-menu__menu
-						+menu([
-						{href: '#', name: 'Новости'},
-						{href: '#', name: 'Блоги'},
-						{href: '#', name: 'Мастхэв'},
-						{href: '#', name: 'Журналы'},
-						{href: '#', name: 'Смотрят звезды'},
-						{href: '#', name: 'Афиша'}
-						], 'header-menu__list', 'header-menu__link')
-
-			.header__block.header-mobile
-				.header-logo__help.header-logo__help_left
-					a(href="#").header-logo__link.header-logo__link_search
-						figure
-							include ../../images/icons/search.svg
-							figcaption Поиск
-					a(href="#").header-logo__link.header-logo__link_eye
-						figure
-							include ../../images/icons/eye.svg
-							figcaption Слабовидящим
-				.header-logo__help.block-logo__help_right
-					a(href="#").header-logo__link.header-logo__link_signin
-						figure
-							include ../../images/icons/signin.svg
-							figcaption Регистрация
-					a(href="#").header-logo__link.header-logo__link_signup
-						figure
-							include ../../images/icons/signup.svg
-							figcaption Войти
