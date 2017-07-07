@@ -41,11 +41,11 @@ mixin main__item(items)
 			if item.img===''
 				figure
 					figcaption=item.fig
-					.main__overlay
-						+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
 				.main__content
 					+date(item.date, item.time)
 					p.main__text=item.text
+				.main__overlay.main__overlay_no-img
+					+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
 			else
 				figure
 					img(src="images/main/" + item.img + ".png", alt=item.alt)
