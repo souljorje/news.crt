@@ -1,1 +1,1 @@
-Creative test work
+Я бы делал коммиты чаще, но был поглощён BEM и SVG.
