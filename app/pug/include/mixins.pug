@@ -12,18 +12,6 @@ mixin description(desc)
 mixin keywords(keys)
 	meta(name="keywords" content=keys)
 
-//- mixin social(items,type)
-//- 	if type===undefined
-//- 		each item in items
-//- 			li.social__item
-//- 				a(href=item.href)
-//- 					include ../../images/social/vk.svg
-//- 	else
-//- 		each item in items
-//- 			li.social__item(class=type)
-//- 				a(href=item.href)
-//- 					include ../../images/social/vk.svg
-
 mixin menu(items,li,a)
 	each item in items
 		li(class=li)
@@ -37,24 +25,27 @@ mixin date(date, time)
 
 mixin main__item(items)
 	each item in items
-		a(class='main__item', href="#", id=item.id)
-			if item.img===''
-				figure
-					figcaption=item.fig
-				.main__content
-					+date(item.date, item.time)
-					p.main__text=item.text
-				.main__overlay.main__overlay_no-img
+		if item.img===''
+			div(class='main-item main-item_no-img', href="#", id=item.id)
+				a.main-item__link-wrap(href='#')
+					.main-item__img
+					.main-item__content
+						+date(item.date, item.time)
+						.main-item__text=item.text
 					+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
-			else
-				figure
-					img(src="images/main/" + item.img + ".png", alt=item.alt)
-					figcaption=item.fig
-					.main__overlay
+				a.main-item__tag(href='#')
+		else
+			div(class='main-item', href="#", id=item.id)
+				a.main-item__link-wrap(href='#')
+					.main-item__img
+						img(src="images/main/" + item.img + ".png", alt=item.alt)
+						.main-item__overlay
 						+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
-				.main__content
-					+date(item.date, item.time)
-					p.main__text=item.text
+					.main__content
+						+date(item.date, item.time)
+						.main-item__text=item.text
+				a.main-item__tag(href='#')
+
 
 mixin discuss(type,like,dislike,view,comment)
 	if type===undefined
@@ -62,30 +53,30 @@ mixin discuss(type,like,dislike,view,comment)
 		.discuss
 			.discuss__item.discuss__item_like
 				include ../../images/icons/like.svg
-				span.discuss__number #{like}
+				.discuss__number #{like}
 			.discuss__item.discuss__item_dislike
 				include ../../images/icons/dislike.svg
-				span.discuss__number #{dislike}
+				.discuss__number #{dislike}
 			.discuss__item.discuss__item_view
 				include ../../images/icons/view.svg
-				span.discuss__number #{view}
+				.discuss__number #{view}
 			.discuss__item.discuss__item_comment
 				include ../../images/icons/comment.svg
-				span.discuss__number #{comment}
+				.discuss__number #{comment}
 	else
 		.discuss(class=type)
 			.discuss__item.discuss__item_like
 				include ../../images/icons/like.svg
-				span.discuss__number #{like}
+				.discuss__number #{like}
 			.discuss__item.discuss__item_dislike
 				include ../../images/icons/dislike.svg
-				span.discuss__number #{dislike}
+				.discuss__number #{dislike}
 			.discuss__item.discuss__item_view
 				include ../../images/icons/view.svg
-				span.discuss__number #{view}
+				.discuss__number #{view}
 			.discuss__item.discuss__item_comment
 				include ../../images/icons/comment.svg
-				span.discuss__number #{comment}
+				.discuss__number #{comment}
 
 
 mixin sidebar__item(items)
