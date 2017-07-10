@@ -44,38 +44,40 @@ a
 //header styles
 @import 'include/header.styl'
 
-.page
+.breadcrumbs
+	width 100%
+	margin-bottom 18px
+	text-align center
 	padding-top 25px
+	&-item
+		font-set(0.875,medium)
+		color gray
+		&:first-child:after
+			dot()
+		&:hover, &:focus
+			color purple
+
+.page-wrap
 	padding-bottom 61px
 	display flex
-	flex-wrap wrap
-	justify-content space-between
-	&__breadcrumbs
-		width 100%
-		margin-bottom 18px
-		text-align center
-		&-item
-			font-set(0.875,medium)
-			color gray
-			&:first-child:after
-				dot()
-			&:hover, &:focus
-				color purple
+	justify-content center
 
 .main
-	width 74.6%
 	min-width 290px
+	margin-right 20px
 	&__heading
 		font-set(2.25, medium)
 		margin-top 0
 		margin-bottom 38px
 		line-height 0.7
 	/.tags
-		margin-bottom 38px
+		margin-bottom 28px
 		list-style-type none
 		display flex
+		flex-wrap wrap
 		&__item
 			margin-right 10px
+			margin-bottom 10px
 		&__link
 			font-set(0.75 ,medium)
 			text-transform uppercase
@@ -105,9 +107,13 @@ a
 		height 400px
 		background-color #fff
 		margin-bottom 20px
+		&__link-wrap
+			display block
+			height 100%
 		&__img
 			position relative
 			min-height 59px
+			max-height 200px
 			img
 				max-width 100%
 		&__text
@@ -116,7 +122,9 @@ a
 			color #000
 			^[0]-item:hover &
 				color purple
-		figcaption
+		&__content
+			padding 21px 24px
+		&__tag
 			position absolute
 			top 21px
 			left 19px
@@ -125,15 +133,17 @@ a
 			text-transform uppercase
 			padding 2px 12px
 			border-radius 15px
-			^[-1]#art figcaption
+			&:hover
+				color #000
+			^[-1]#art &
 				background-color #ba5fc1
-			^[-1]#fasion figcaption
+			^[-1]#fasion &
 				background-color #542e57
-			^[-1]#education figcaption
+			^[-1]#education &
 				background-color #5c9715
-			^[-1]#enjoy figcaption
+			^[-1]#enjoy &
 				background-color #ff7725
-			^[-1]#sport figcaption
+			^[-1]#sport &
 				background-color #6103fc
 		&:hover
 			box-shadow 0 10px 40px rgba(#324153 30%)
@@ -199,8 +209,6 @@ a
 					fill #fff
 					margin-right 0
 
-	&__content
-		padding 21px 24px
 		/.date
 			font-set(0.75, medium)
 			color gray
@@ -210,7 +218,7 @@ a
 				height 14px
 				fill gray
 				margin 0 8px
-	&__button
+	/.button-purple
 		width 100%
 		background-color purple
 		font-set(0.8125,bold)
@@ -223,15 +231,13 @@ a
 
 
 .sidebar
-	width 300px
-	overflow hidden
+	max-width 300px
 	&__heading
-		display block
-		padding-top 38px
-		margin-bottom 38px
-		margin 0
-	&__block
 		padding 0 23px
+		font-set(1.875, medium)
+		margin-bottom 21px
+	&__block
+		padding-top 27px
 		background-color #fff
 		margin-bottom 20px
 	/.period
@@ -240,18 +246,23 @@ a
 		display flex
 		justify-content space-between
 		align-items center
-		padding-top 38px
-		padding-bottom 14px
+		padding 0 23px 9px
+		border-bottom 1px solid #edeef0
+		&__item
+			&:first-child, &:nth-child(2)
+				&:after
+					dot()
+					margin-left 20px
 		&__link
-			color #000
+			font-set(0.8125, bold)
+			color gray
+			text-transform uppercase
 			z-index 2
 			position relative
 			&:hover,&:focus
 				color #000
 				&:after
 					green-line()
-		&:after
-			gray-line()
 
 		/.number
 			display inline-flex
@@ -264,13 +275,14 @@ a
 			font-set(0.875,bold)
 			color #fff
 	&__item
+		padding 0 23px
 		margin-top 41px
 		margin-bottom 41px
 	&__text
 		margin-top 10px
 		margin-bottom 19px
 		font-set(1, medium)
-	&__link
+	&__link-more
 		display flex
 		justify-content center
 		align-items center
@@ -279,16 +291,14 @@ a
 		font-set(0.8125, bold)
 		color gray
 		text-transform uppercase
+		border-top 1px solid #edeef0
 		&:after
 			content '+'
 			font-size 1.5em
 			margin-left 11px
 		&:hover,&:focus
 			color purple
-		&:before
-			gray-line()
-			top 0
-	&__button
+	/.button-orange
 		width 100%
 		display flex
 		align-items center

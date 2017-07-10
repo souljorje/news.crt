@@ -33,7 +33,7 @@ mixin main__item(items)
 						+date(item.date, item.time)
 						.main-item__text=item.text
 					+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
-				a.main-item__tag(href='#')
+				a.main-item__tag(href='#')=item.tag
 		else
 			div(class='main-item', href="#", id=item.id)
 				a.main-item__link-wrap(href='#')
@@ -41,10 +41,10 @@ mixin main__item(items)
 						img(src="images/main/" + item.img + ".png", alt=item.alt)
 						.main-item__overlay
 						+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
-					.main__content
+					.main-item__content
 						+date(item.date, item.time)
 						.main-item__text=item.text
-				a.main-item__tag(href='#')
+				a.main-item__tag(href='#')=item.tag
 
 
 mixin discuss(type,like,dislike,view,comment)
@@ -82,13 +82,13 @@ mixin discuss(type,like,dislike,view,comment)
 mixin sidebar__item(items)
 		each item in items
 			div.sidebar__item(class=item.class)
-				if item.class==='sidebar__item-news'
-					span.number=item.num
+				if item.class==='sidebar__item_news'
+					.number=item.num
 					+date(item.date, item.time)
-					p.sidebar__text=item.text
+					.sidebar__text=item.text
 					+discuss('',item.like, item.dislike, item.view, item.comment)
 				else
 					+date(item.date, item.time)
-					p.sidebar__text=item.text
+					.sidebar__text=item.text
 					+discuss('',item.like, item.dislike, item.view, item.comment)
 

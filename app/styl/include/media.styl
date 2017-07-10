@@ -1,4 +1,4 @@
-rupture.scale = 0 480px 767px 992px 1200px
+rupture.scale = 0 480px 767px 991px 1280px
 rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 
 // Container
@@ -8,27 +8,191 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 
 +above(992px)
 	.container
-		width 970px
+		width 1000px
 
 +above(1200px)
 	.container
-		width 1170px
+		width 1200px
 
 +above(1281px)
 	.container
 		width 1290px
 
 // // (max-width: 1200px)
-// +below('l')
++below('l')
+	.main
+		max-width 620px
 
-// // (max-width: 992px)
-// +below('m')
 
-// // (max-width: 767px)
-// +below('s')
+// (max-width: 992px)
++below('m')
+	.navbar
+		&-toggle
+			position absolute
+			left 0
+			top 0
+			bottom 0
+			float none
+			display block
+			padding-left 0
+			.icon-bar
+				background-color #000
+				width 40px
+				margin-bottom 8px
+		&__header
+			display flex
+			position relative
+			justify-content center
+			padding 15px 0 10px
+			margin 0 auto
+			max-width 420px
+		&-collapse
+			background-color #fff
+			padding 0
+			margin-top 17px
+			&.collapse
+				margin auto
+				position absolute
+				left 0
+				right 0
+				display none!important
+				z-index 3
+				&.in
+					display flex!important
+					flex-direction column
+		.collapsing
+			display flex
+			flex-direction column
+			margin auto
+			position absolute
+			left 0
+			right 0
+			z-index 3
+		&-nav
+			float: none!important
+			margin: 7.5px -15px
+		&-nav > li
+			float: none
+		&-nav > li > a
+			padding: 10px
 
-// // (max-width: 480px)
-// +below('xs')
+	.header
+		&-logo__brand_mobile
+			display block
+		&-mobile
+			padding 15px 0
+			border-top 1px solid #edeef0
+			display flex
+			.help
+				justify-content center
+		&__block
+			border-top 1px solid  #edeef0
+			&:first-child
+				order 2
+				.container
+					width 100%
+					padding 0
+			&:nth-child(2)
+				display none
+		&-nav
+			flex-direction column
+			&__nav
+				padding 10px 0
+				align-items center
+				flex-direction column
+				order 2
+			&__item
+				margin 5px 0
+			.social
+				display none
+			.map
+				margin-left 0
+				width 100%
+				display flex
+				justify-content center
+				border-bottom 1px solid  #edeef0
+				&:after
+					display none
+				&__icon
+					svg
+						stroke #000
+				&__text
+					color #000
+				&:focus, &:hover
+					.map
+						&__text
+							color purple
+						&__icon
+							svg
+								stroke purple
 
+
+		&-menu
+			padding 10px 0
+			&__menu
+				width auto
+				align-items center
+				flex-direction column
+			&__item
+				margin 5px 0
+	.footer
+		&__logo
+			margin 45px 0
+			&-wrap:after
+				right -40px
+			&:before, &:after
+				border-width 0px 15px
+		&__social
+			flex-wrap wrap
+			margin-bottom 28px
+		&__anchor-up
+			position inherit
+	.map_footer
+		position inherit
+		margin-bottom 30px
+	.social_footer
+		margin-bottom 30px
+	.main
+		max-width 300px
+
+// (max-width: 768px)
++below('s')
+	.footer-menu__item
+		margin-right 12px
+		margin-bottom 5px
+
++below(629px)
+	.page-wrap
+		flex-wrap wrap
+	.main
+		margin-right 0
+
+// (max-width: 480px)
++below('xs')
+	.navbar__header
+		max-width 275px
+	.header-logo__brand
+		svg
+			height 40px
+	.help
+		svg
+			stroke-width 2px
+		&__item
+			margin-right 13px
+		&__text
+			font-size 0.6em
+		&__icon
+			^[1]&_search
+				svg
+					height 25px
+			^[1]&_eye
+				svg
+					height 25px
+			^[1]&_signup
+				svg
+					height 25px
+			^[1]&_signin
+				svg
+					height 25px
 // // Custom media iPhone6 & <
 // +below(380px)
