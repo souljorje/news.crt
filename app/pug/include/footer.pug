@@ -1,47 +1,59 @@
 footer.footer
-	.container
-		nav.footer__menu
-			+menu([
-			{href: '#', name: 'Новости'},
-			{href: '#', name: 'Блоги'},
-			{href: '#', name: 'Мастхэв'},
-			{href: '#', name: 'Журналы'},
-			{href: '#', name: 'Смотрят звезды'},
-			{href: '#', name: 'Афиша'}
-			], 'footer__list', 'footer__link')
-		.footer__logo
-			include ../../images/icons/logo.svg
-		.footer__social
-			.footer__map
-				a(href="#")
-					figure
-						include ../../images/icons/map.svg
-						figcaption Карта студенческих СМИ Москвы
-			ul.social.social_footer
-				li.social__item.social__item_vk
-					a(href="#").social__link
-						include ../../images/social/vk.svg
-				li.social__item.social__item_google
-					a(href="#").social__link
-						include ../../images/social/google.svg
-				li.social__item.social__item_youtube
-					a(href="#").social__link
-						include ../../images/social/youtube.svg
-				li.social__item.social__item_instagram
-					a(href="#").social__link
-						include ../../images/social/instagram.svg
-				li.social__item.social__item_fb
-					a(href="#").social__link
-						include ../../images/social/fb.svg
-				li.social__item.social__item_ok
-					a(href="#").social__link
-						include ../../images/social/ok.svg
-				li.social__item.social__item_twitter
-					a(href="#").social__link
-						include ../../images/social/twitter.svg
-			a.footer__anchor-up(href='#')
-				|Наверх
-				include ../../images/icons/arrow_up.svg
-
-		.footer__terms
-			p 2017 © Первое студенческое агентство. При использовании материалов ссылка на источник обязательна.
+	.footer__wrap
+		.container
+			nav.footer-menu.footer__menu
+				+menu([
+				{href: '#', name: 'Новости'},
+				{href: '#', name: 'Блоги'},
+				{href: '#', name: 'Мастхэв'},
+				{href: '#', name: 'Журналы'},
+				{href: '#', name: 'Смотрят звезды'},
+				{href: '#', name: 'Афиша'}
+				], 'footer-menu__item', 'footer-menu__link')
+	.footer__wrap
+		.container
+			.footer__logo
+				.footer__logo-wrap
+					include ../../images/icons/logo.svg
+			.footer__social
+				.map.map_footer
+					a.map__link(href="#")
+						.map__icon
+							include ../../images/icons/map.svg
+						.map__text Карта студенческих СМИ Москвы
+				ul.social.social_footer
+					li.social__item.social__item_vk
+						a(href="#").social__link
+							.social__icon.social__icon_vk
+								include ../../images/social/vk.svg
+					li.social__item.social__item_google
+						a(href="#").social__link
+							.social__icon.social__icon_google
+								include ../../images/social/google.svg
+					li.social__item.social__item_youtube
+						a(href="#").social__link
+							.social__icon.social__icon_youtube
+								include ../../images/social/youtube.svg
+					li.social__item.social__item_instagram
+						a(href="#").social__link
+							.social__icon.social__icon_instagram
+								include ../../images/social/instagram.svg
+					li.social__item.social__item_fb
+						a(href="#").social__link
+							.social__icon.social__icon_fb
+								include ../../images/social/fb.svg
+					li.social__item.social__item_ok
+						a(href="#").social__link
+							.social__icon.social__icon_ok
+								include ../../images/social/ok.svg
+					li.social__item.social__item_twitter
+						a(href="#").social__link
+							.social__icon.social__icon_twitter
+								include ../../images/social/twitter.svg
+				a.footer__anchor-up(href='#')
+					|Наверх
+					include ../../images/icons/arrow_up.svg
+	.footer__wrap
+		.container
+			.footer__terms
+				| 2017 © Первое студенческое агентство. При использовании материалов ссылка на источник обязательна.
