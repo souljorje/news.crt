@@ -1,14 +1,15 @@
 header.header
 	nav.navbar
-		.navbar-header
-			//Menu button
-			button(type='button', data-toggle='collapse', data-target='.navbar-collapse').navbar-toggle
-				span.sr-only Навигация
-				span.icon-bar
-				span.icon-bar
-				span.icon-bar
-			.navbar-brand
-				include ../../images/icons/logo.svg
+		.container
+			.navbar__header
+				//Menu button
+				button(type='button', data-toggle='collapse', data-target='.navbar-collapse').navbar-toggle
+					span.sr-only Навигация
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				.header-logo__brand.header-logo__brand_mobile
+					include ../../images/icons/logo.svg
 		nav.collapse.navbar-collapse(role='navigation')
 			.header__block
 				.container
@@ -26,46 +27,45 @@ header.header
 								.map__icon
 									include ../../images/icons/map.svg
 								.map__text Карта студенческих СМИ Москвы
-						.header-nav__social
-							ul.social
-								li.social__item.social__item_vk
-									a(href="#").social__link
-										.social__icon.social__icon_vk
-											include ../../images/social/vk.svg
-								li.social__item.social__item_google
-									a(href="#").social__link
-										.social__icon.social__icon_google
-											include ../../images/social/google.svg
-								li.social__item.social__item_youtube
-									a(href="#").social__link
-										.social__icon.social__icon_youtube
-											include ../../images/social/youtube.svg
-								li.social__item.social__item_instagram
-									a(href="#").social__link
-										.social__icon.social__icon_instagram
-											include ../../images/social/instagram.svg
-								li.social__item.social__item_fb
-									a(href="#").social__link
-										.social__icon.social__icon_fb
-											include ../../images/social/fb.svg
-								li.social__item.social__item_ok
-									a(href="#").social__link
-										.social__icon.social__icon_ok
-											include ../../images/social/ok.svg
-								li.social__item.social__item_twitter
-									a(href="#").social__link
-										.social__icon.social__icon_twitter
-											include ../../images/social/twitter.svg
+						ul.social
+							li.social__item.social__item_vk
+								a(href="#").social__link
+									.social__icon.social__icon_vk
+										include ../../images/social/vk.svg
+							li.social__item.social__item_google
+								a(href="#").social__link
+									.social__icon.social__icon_google
+										include ../../images/social/google.svg
+							li.social__item.social__item_youtube
+								a(href="#").social__link
+									.social__icon.social__icon_youtube
+										include ../../images/social/youtube.svg
+							li.social__item.social__item_instagram
+								a(href="#").social__link
+									.social__icon.social__icon_instagram
+										include ../../images/social/instagram.svg
+							li.social__item.social__item_fb
+								a(href="#").social__link
+									.social__icon.social__icon_fb
+										include ../../images/social/fb.svg
+							li.social__item.social__item_ok
+								a(href="#").social__link
+									.social__icon.social__icon_ok
+										include ../../images/social/ok.svg
+							li.social__item.social__item_twitter
+								a(href="#").social__link
+									.social__icon.social__icon_twitter
+										include ../../images/social/twitter.svg
 
 			.header__block
 				.container
 					.header-logo
 						.help
-							a.help__link(href="#")
+							a.help__item(href="#")
 								.help__icon.help__icon_search
 									include ../../images/icons/search.svg
 								.help__text Поиск
-							a.help__link(href="#")
+							a.help__item(href="#")
 								.help__icon.help__icon_eye
 									include ../../images/icons/eye.svg
 								.help__text Слабовидящим
@@ -74,11 +74,11 @@ header.header
 							include ../../images/icons/logo.svg
 
 						.help
-							a.help__link(href="#")
+							a.help__item(href="#")
 								.help__icon.help__icon_eye
 									include ../../images/icons/signup.svg
 								.help__text Регистрация
-							a.help__link(href="#")
+							a.help__item(href="#")
 								.help__icon.help__icon_eye
 									include ../../images/icons/signin.svg
 								.help__text Войти
@@ -94,26 +94,24 @@ header.header
 							{href: '#', name: 'Журналы'},
 							{href: '#', name: 'Смотрят звезды'},
 							{href: '#', name: 'Афиша'}
-							], 'header-menu__list', 'header-menu__link')
+							], 'header-menu__item', 'header-menu__link')
 
-		.header__block
+		.header-mobile
 			.container
-				.header-mobile
-					.header-logo__help
-						a(href="#").header-logo__link.header-logo__link_search
-							figure
-								include ../../images/icons/search.svg
-								figcaption Поиск
-						a(href="#").header-logo__link.header-logo__link_eye
-							figure
-								include ../../images/icons/eye.svg
-								figcaption Слабовидящим
-					.header-logo__help
-						a(href="#").header-logo__link.header-logo__link_signin
-							figure
-								include ../../images/icons/signin.svg
-								figcaption Регистрация
-						a(href="#").header-logo__link.header-logo__link_signup
-							figure
-								include ../../images/icons/signup.svg
-								figcaption Войти
+				.help
+					a.help__item(href="#")
+						.help__icon.help__icon_search
+							include ../../images/icons/search.svg
+						.help__text Поиск
+					a.help__item(href="#")
+						.help__icon.help__icon_eye
+							include ../../images/icons/eye.svg
+						.help__text Слабовидящим
+					a.help__item(href="#")
+						.help__icon.help__icon_eye
+							include ../../images/icons/signup.svg
+						.help__text Регистрация
+					a.help__item(href="#")
+						.help__icon.help__icon_eye
+							include ../../images/icons/signin.svg
+						.help__text Войти
