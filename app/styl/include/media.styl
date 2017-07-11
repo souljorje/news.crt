@@ -6,13 +6,9 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 	.container
 		width 750px
 
-+above(992px)
++above(1001px)
 	.container
 		width 1000px
-
-+above(1200px)
-	.container
-		width 1200px
 
 +above(1281px)
 	.container
@@ -20,7 +16,7 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 
 // // (max-width: 1200px)
 +below('l')
-	.main
+	.news
 		max-width 620px
 
 
@@ -72,9 +68,9 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 
 	// Header styles
 	.header
-		&-logo__brand_mobile
+		/.logo_header_mobile
 			display block
-		&-mobile
+		&__mobile
 			padding 15px 0
 			border-top 1px solid #edeef0
 			display flex
@@ -129,13 +125,27 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 			&__item
 				margin 5px 0
 
-	// Main styles
-	.main
-		max-width 300px
+	// news styles
+	.page-wrap
+		flex-wrap wrap
+	.news
+		max-width 100%
+		margin-right 0
+		&__heading
+			text-align center
 		&-item
-			width 100%
+			max-width inherit
+			width 48.3%
 			max-height 200px
-			&:not(.main-item_no-img)
+			&__img
+				display flex
+				align-items center
+				overflow hidden
+				img
+					width 100%
+			&:nth-child(odd)
+				margin-right 20px
+			&:not(.news-item_no-img)
 				^[1]__img
 					min-height 40px
 				^[1]__overlay
@@ -168,7 +178,7 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 					margin-bottom 10px
 					svg
 						fill #fff
-			&__tag
+			/.tag_news-item
 				top 12px
 				left 15px
 			^[1]&_no-img
@@ -180,7 +190,12 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 						right 15px
 				^[1]__text
 					margin-top 0
-
+	// Sidebar styles
+	.sidebar
+		width 100%
+		max-width 100%
+		&__heading
+			text-align center
 	// Footer styles
 	.footer
 		&__logo
@@ -207,18 +222,20 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 		margin-bottom 5px
 
 // Custom Media
-+below(629px)
-	.page-wrap
-		flex-wrap wrap
-	.main
-		margin-right 0
++below(630px)
+	.news
+		&-item
+			max-width 100%
+			width 100%
+			&:nth-child(odd)
+				margin-right 0
 
 // (max-width: 480px)
 +below('xs')
 	// Header styles
 	.navbar__header
 		max-width 275px
-	.header-logo__brand
+	/.logo_header_mobile
 		svg
 			height 40px
 	.help

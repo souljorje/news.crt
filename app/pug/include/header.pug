@@ -7,10 +7,10 @@ header.header
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				.header-logo__brand.header-logo__brand_mobile
+				.logo.logo_header.logo_header_mobile
 					include ../../images/icons/logo.svg
 		nav.collapse.navbar-collapse(role='navigation')
-			.header__block
+			.header__block.header__block_border
 				.container
 					.header-nav
 						ul.header-nav__nav
@@ -56,9 +56,9 @@ header.header
 									.social__icon.social__icon_twitter
 										include ../../images/social/twitter.svg
 
-			.header__block
+			.header__block.header__block_border
 				.container
-					.header-logo
+					.header__middle
 						.help
 							a.help__item(href="#")
 								.help__icon.help__icon_search
@@ -69,7 +69,7 @@ header.header
 									include ../../images/icons/eye.svg
 								.help__text Слабовидящим
 
-						.header-logo__brand
+						.logo.logo_header
 							include ../../images/icons/logo.svg
 
 						.help
@@ -95,7 +95,7 @@ header.header
 							{href: '#', name: 'Афиша'}
 							], 'header-menu__item', 'header-menu__link')
 
-		.header-mobile
+		.header__mobile
 			.container
 				.help
 					a.help__item(href="#")

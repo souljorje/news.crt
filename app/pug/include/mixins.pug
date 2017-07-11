@@ -23,28 +23,28 @@ mixin date(date, time)
 		include ../../images/icons/clock.svg
 		|#{time}
 
-mixin main__item(items)
+mixin news__item(items)
 	each item in items
 		if item.img===''
-			div(class='main-item main-item_no-img', href="#", id=item.id)
-				a.main-item__link-wrap(href='#')
-					.main-item__img
-					.main-item__content
+			div(class='news-item news-item_no-img', href="#", id=item.id)
+				a.news-item__link-wrap(href='#')
+					.news-item__img
+					.news-item__content
 						+date(item.date, item.time)
-						.main-item__text=item.text
+						.news-item__text=item.text
 					+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
-				a.main-item__tag(href='#')=item.tag
+				a.tag.tag_news-item(href='#')=item.tag
 		else
-			div(class='main-item', href="#", id=item.id)
-				a.main-item__link-wrap(href='#')
-					.main-item__img
-						img(src="images/main/" + item.img + ".png", alt=item.alt)
-						.main-item__overlay
+			div(class='news-item', href="#", id=item.id)
+				a.news-item__link-wrap(href='#')
+					.news-item__img
+						img(src="images/news/" + item.img + ".png", alt=item.alt)
+						.news-item__overlay
 						+discuss(item.discuss,item.like, item.dislike, item.view, item.comment)
-					.main-item__content
+					.news-item__content
 						+date(item.date, item.time)
-						.main-item__text=item.text
-				a.main-item__tag(href='#')=item.tag
+						.news-item__text=item.text
+				a.tag.tag_news-item(href='#')=item.tag
 
 
 mixin discuss(type,like,dislike,view,comment)
@@ -91,12 +91,14 @@ mixin sidebar__item(items)
 		each item in items
 			div.sidebar__item(class=item.class)
 				if item.class==='sidebar__item_news'
-					.number=item.num
-					+date(item.date, item.time)
+					.sidebar__date
+						.number=item.num
+						+date(item.date, item.time)
 					.sidebar__text=item.text
 					+discuss('',item.like, item.dislike, item.view, item.comment)
 				else
-					+date(item.date, item.time)
+					.sidebar__date
+						+date(item.date, item.time)
 					.sidebar__text=item.text
 					+discuss('',item.like, item.dislike, item.view, item.comment)
 

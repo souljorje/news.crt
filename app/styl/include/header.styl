@@ -1,13 +1,14 @@
 .navbar
 	margin-bottom 0
 	position relative
-
+.navbar-collapse
+	padding 0
 
 .header
 	background-color #fff
 	&__block
 		width 100%
-		&:first-child,&:nth-child(2)
+		&_border
 			border-bottom 1px solid  #edeef0
 	&-nav
 		position relative
@@ -111,7 +112,7 @@
 					^[-1]^[-1]_test svg
 						height 16px
 
-	&-logo
+	&__middle
 		padding 32px 0 27px
 		display flex
 		justify-content space-between
@@ -148,11 +149,8 @@
 			&__text
 				font-set(0.75,bold)
 				text-transform uppercase
-			figcaption
-				text-transform uppercase
-				margin-top 12px
 
-		&__brand
+		/.logo_header
 			svg
 				fill #262053
 				height 69px
@@ -178,5 +176,5 @@
 			&:hover, &:focus
 				color purple
 
-	&-mobile
+	&__mobile
 		display none
