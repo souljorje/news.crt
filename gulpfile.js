@@ -95,7 +95,7 @@ gulp.task('fonts', ['fface'], function(){
 });
 
 // Default task
-gulp.task('default', ['browser-sync', 'styles'], function(){
+gulp.task('default', ['browser-sync', 'styles', 'pug'], function(){
 	gulp.watch('app/styl/**/*.styl', ['styles']);
 	gulp.watch('app/pug/**/*.pug', ['pug']);
 	gulp.watch('app/*.html', browserSync.reload);
