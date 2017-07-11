@@ -51,31 +51,39 @@ mixin discuss(type,like,dislike,view,comment)
 	if type===undefined
 		type=''
 		.discuss
-			.discuss__item.discuss__item_like
-				include ../../images/icons/like.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_like
+					include ../../images/icons/like.svg
 				.discuss__number #{like}
-			.discuss__item.discuss__item_dislike
-				include ../../images/icons/dislike.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_dislike
+					include ../../images/icons/dislike.svg
 				.discuss__number #{dislike}
-			.discuss__item.discuss__item_view
-				include ../../images/icons/view.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_view
+					include ../../images/icons/view.svg
 				.discuss__number #{view}
-			.discuss__item.discuss__item_comment
-				include ../../images/icons/comment.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_comment
+					include ../../images/icons/comment.svg
 				.discuss__number #{comment}
 	else
 		.discuss(class=type)
-			.discuss__item.discuss__item_like
-				include ../../images/icons/like.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_like
+					include ../../images/icons/like.svg
 				.discuss__number #{like}
-			.discuss__item.discuss__item_dislike
-				include ../../images/icons/dislike.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_dislike
+					include ../../images/icons/dislike.svg
 				.discuss__number #{dislike}
-			.discuss__item.discuss__item_view
-				include ../../images/icons/view.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_view
+					include ../../images/icons/view.svg
 				.discuss__number #{view}
-			.discuss__item.discuss__item_comment
-				include ../../images/icons/comment.svg
+			.discuss__item
+				.discuss__icon.discuss__icon_comment
+					include ../../images/icons/comment.svg
 				.discuss__number #{comment}
 
 

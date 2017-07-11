@@ -1,4 +1,4 @@
-rupture.scale = 0 480px 767px 991px 1280px
+rupture.scale = 0 480px 767px 1000px 1280px
 rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 
 // Container
@@ -24,8 +24,9 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 		max-width 620px
 
 
-// (max-width: 992px)
+// (max-width: 1000px)
 +below('m')
+	//Responsive menu
 	.navbar
 		&-toggle
 			position absolute
@@ -68,14 +69,8 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 			left 0
 			right 0
 			z-index 3
-		&-nav
-			float: none!important
-			margin: 7.5px -15px
-		&-nav > li
-			float: none
-		&-nav > li > a
-			padding: 10px
 
+	// Header styles
 	.header
 		&-logo__brand_mobile
 			display block
@@ -125,8 +120,6 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 						&__icon
 							svg
 								stroke purple
-
-
 		&-menu
 			padding 10px 0
 			&__menu
@@ -135,6 +128,56 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 				flex-direction column
 			&__item
 				margin 5px 0
+
+	// Main styles
+	.main
+		max-width 300px
+		&-item
+			width 100%
+			max-height 200px
+			&:not(.main-item_no-img)
+				^[1]__img
+					min-height 40px
+				^[1]__overlay
+					display block
+				^[1]
+					.discuss
+						display flex
+						top inherit
+						bottom 0
+						.discuss__item
+							flex-direction row
+							height 40px
+							svg
+								margin-right 3px
+				^[2] ^[1]__content
+					padding 15px
+					display flex
+					flex-direction column
+					position absolute
+					top 25px
+				^[2] ^[1]__text
+					margin-top 0
+					order -1
+					color #fff
+				^[2] .date
+					color #fff
+					svg
+						fill #fff
+			&__tag
+				top 12px
+				left 15px
+			^[1]&_no-img
+				^[1]__content
+					padding 0 15px
+					^[-1] .date
+						position absolute
+						top 14px
+						right 15px
+				^[1]__text
+					margin-top 0
+
+	// Footer styles
 	.footer
 		&__logo
 			margin 45px 0
@@ -152,8 +195,6 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 		margin-bottom 30px
 	.social_footer
 		margin-bottom 30px
-	.main
-		max-width 300px
 
 // (max-width: 768px)
 +below('s')
@@ -161,6 +202,7 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 		margin-right 12px
 		margin-bottom 5px
 
+// Custom Media
 +below(629px)
 	.page-wrap
 		flex-wrap wrap
@@ -169,6 +211,7 @@ rupture.scale-names = 'xs' 's' 'm' 'l' 'xl'
 
 // (max-width: 480px)
 +below('xs')
+	// Header styles
 	.navbar__header
 		max-width 275px
 	.header-logo__brand
